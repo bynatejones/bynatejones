@@ -29,24 +29,18 @@ const projects = (await getCollection('work'))
 	<div class="stack gap-20 lg:gap-48">
 		<div class="wrapper stack gap-8 lg:gap-20">
 			<header class="hero">
+                <img
+					alt="Portrait photo of Nate Jones"
+					width="200"
+					src="/assets/nate.jpg"
+				/>
 				<Hero
-					title="Hello, my name is Jeanine White"
-					tagline="I am a Creative Developer who is currently based in Portland, Oregon."
+					title="Nate Jones"
+					tagline="I'm a Cinematographer, 1st Assistant Camera, and Colorist based out of Los Angeles, CA"
 					align="start"
 				>
-					<div class="roles">
-						<Pill><Icon icon="code" size="1.33em" /> Developer</Pill>
-						<Pill><Icon icon="microphone-stage" size="1.33em" /> Speaker</Pill>
-						<Pill><Icon icon="pencil-line" size="1.33em" /> Writer</Pill>
-					</div>
 				</Hero>
 
-				<img
-					alt="Jeanine White smiling in a red plaid shirt and tortoise shell glasses"
-					width="480"
-					height="620"
-					src="/assets/portrait.jpg"
-				/>
 			</header>
 
 			<Skills />
@@ -119,10 +113,10 @@ const projects = (await getCollection('work'))
 	}
 
 	.hero img {
-		aspect-ratio: 5 / 4;
+		aspect-ratio: 1;
 		object-fit: cover;
 		object-position: top;
-		border-radius: 1.5rem;
+		border-radius: 25rem;
 		box-shadow: var(--shadow-md);
 	}
 
@@ -141,8 +135,8 @@ const projects = (await getCollection('work'))
 		}
 
 		.hero img {
-			aspect-ratio: 3 / 4;
-			border-radius: 4.5rem;
+			aspect-ratio: 1;
+			border-radius: 25rem;
 			object-fit: cover;
 		}
 	}
@@ -158,7 +152,7 @@ const projects = (await getCollection('work'))
 		position: relative;
 	}
 
-	.with-background::before {
+	/* .with-background::before {
 		--hero-bg: var(--bg-image-subtle-2);
 
 		content: '';
@@ -176,12 +170,12 @@ const projects = (await getCollection('work'))
 		background-blend-mode: overlay, normal, normal, normal;
 		mix-blend-mode: var(--bg-blend-mode);
 		z-index: -1;
-	}
+	} */
 
-	.with-background.bg-variant::before {
+	/* .with-background.bg-variant::before {
 		--hero-bg: var(--bg-image-subtle-1);
 	}
-
+ */
 	.section-header {
 		justify-self: center;
 		text-align: center;
