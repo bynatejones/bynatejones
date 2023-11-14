@@ -1,93 +1,79 @@
 [
     {
-        "date": "04/23",
-        "title": "Kyle Pugh College Football",
-        "type": "Documentary",
-        "role": "1st Assistant Camera",
-        "camera": "Sony Venice 2, Alexa Mini"
+        "date": "1711",
+        "title": "Harshaw",
+        "type": "Short",
+        "role": "Director of Photography, Colorist",
+        "camera": ""
     },
     {
-        "date": "03/23",
-        "title": "Kyle Pugh College Football",
-        "type": "Documentary",
-        "role": "1st Assistant Camera",
-        "camera": "Sony Venice 2, Alexa Mini"
+        "date": "1803",
+        "title": "Faerie",
+        "type": "Short",
+        "role": "Director of Photography, Colorist",
+        "camera": ""
     },
     {
-        "date": "02/23",
-        "title": "Kyle Pugh College Football",
-        "type": "Documentary",
-        "role": "1st Assistant Camera",
-        "camera": "Sony Venice 2, Alexa Mini"
+        "date": "1808",
+        "title": "Homocide",
+        "type": "Short",
+        "role": "Gaffer",
+        "camera": ""
     },
     {
-        "date": "11/23",
-        "title": "Sammi Nassar - Heavyweight",
+        "date": "1808",
+        "title": "Nomad River",
+        "type": "Feature",
+        "role": "Gaffer",
+        "camera": ""
+    },
+    {
+        "date": "1809",
+        "title": "Fix Me",
+        "type": "Short",
+        "role": "1st Assistant Camera",
+        "camera": "Red Scarlet-W"
+    },
+    {
+        "date": "1812",
+        "title": "Loss of Grace",
+        "type": "Feature",
+        "role": "Gaffer",
+        "camera": ""
+    },
+    {
+        "date": "2109",
+        "title": "VeSync",
+        "type": "Commercial",
+        "role": "1st Assistant Camera",
+        "camera": "Red Monstro, Red Komodo"
+    },
+    {
+        "date": "2111",
+        "title": "Dennis Rodman x Culture Kings",
+        "type": "Commercial",
+        "role": "1st Assistant Camera",
+        "camera": "Red Ranger Gemini"
+    },
+    {
+        "date": "2201",
+        "title": "Candy Flip",
+        "type": "Feature",
+        "role": "1st Assistant Camera - B Cam",
+        "camera": "Sony Venice"
+    },
+    {
+        "date": "2203",
+        "title": "Machine Gun Kelly - Maybe",
         "type": "Music Video",
-        "role": "1st Assistant Camera",
-        "camera": "Sony Venice 2"
+        "role": "2nd Assistant Camera",
+        "camera": "Alexa Mini"
     },
     {
-        "date": "dfsf",
-        "title": "",
-        "type": "",
-        "role": "",
-        "camera": ""
-    },
-    {
-        "date": "",
-        "title": "",
-        "type": "",
-        "role": "",
-        "camera": ""
-    },
-    {
-        "date": "",
-        "title": "",
-        "type": "",
-        "role": "",
-        "camera": ""
-    },
-    {
-        "date": "",
-        "title": "",
-        "type": "",
-        "role": "",
-        "camera": ""
-    },
-    {
-        "date": "",
-        "title": "",
-        "type": "",
-        "role": "",
-        "camera": ""
-    },
-    {
-        "date": "",
-        "title": "",
-        "type": "",
-        "role": "",
-        "camera": ""
-    },
-    {
-        "date": "",
-        "title": "",
-        "type": "",
-        "role": "",
-        "camera": ""
-    },
-    {
-        "date": "",
-        "title": "",
-        "type": "",
-        "role": "",
-        "camera": ""
-    },
-    {
-        "date": "asf",
-        "title": "",
-        "type": "",
-        "role": "",
-        "camera": ""
+        "date": "2203",
+        "title": "MoviePass",
+        "type": "Commercial",
+        "role": "1st Assistant Camera - B Cam",
+        "camera": "Red Monstro, Alexa Mini"
     }
 ]

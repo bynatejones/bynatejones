@@ -29,7 +29,7 @@ const projects = (await getCollection('work'))
 ---
 
 <BaseLayout>
-	<div class="stack gap-20 lg:gap-48">
+	<div class="stack gap-20 lg:gap-2">
 		<div class="wrapper stack gap-8 lg:gap-20">
 			<header class="hero">
 				<Hero
@@ -38,26 +38,79 @@ const projects = (await getCollection('work'))
 					align="start"
 				>
 				</Hero>
-
+                <div style="width: 100%; text-align: right;">
+                    <img
+                        alt="Nate Jones portrait photo"
+                        width="135"
+                        src="/assets/NateJones_HS.jpg"
+                    />
+                </div>
+                
 			</header>
-			<Skills />
+			<!-- <Skills /> -->
 		</div>
 
         <main class="wrapper stack gap-20 lg:gap-48">
-            <ul>
+            <ul class="resume-list">
                 {
                   ResumeData.map(({ date, title, type, role, camera }) => (
-                    <li style="list-style-type: none; padding: 5px; margin: 10px 0">
-                      <p style="color: #fff">{date} ● <i>{title}</i> ({type})</p>
-                      <p style="font-size: 2rem; font-weight: 700; color: var(--accent-regular);">{role}</p>
-                      <p style="color: #fff; font-weight: 700">{camera}</p>
+                    <li class="resume-list-item">
+                      <p class="resume-top-line">{date} ● <i>{title}</i> ({type})</p>
+                      <p class="resume-middle-line">{role}</p>
+                      <p class="resume-bottom-line">{camera}</p>
                     </li>
-                    <hr style="max-width: 35px; background-color: var(--accent-regular); height: 2px; border: none;"/>
+                    <hr class="resume-list-divider"/>
                   ))
                 }
               </ul>
+              <style>
+                .resume-list {
+                    list-style-type: none;
+                    display: flex;
+                    flex-flow: wrap column;
+                    max-height: 800px;
+                    margin: auto;
+                    overflow: hidden;
+                    margin: 5px;
+                }
+
+                .resume-list-item {
+                    padding: 5px;
+                    margin: 10px 0;
+                }
+
+                .resume-top-line {
+                    font-size: 0.8rem;
+                    line-height: 1rem;
+                    font-weight: 200;
+                    color: #a7a7a7
+                }
+                
+                .resume-middle-line {
+                    font-size: 1.3rem;
+                    line-height: 2rem;
+                    font-weight: 900;
+                    color: var(--accent-regular);
+                    font-variant-caps: small-caps;
+                }
+
+                .resume-bottom-line {
+                    font-size: 1.1rem;
+                    line-height: 1rem;
+                    color: #fff;
+                    font-weight: 500;
+                    font-variant-caps: all-small-caps;
+                }
+
+                .resume-list-divider {
+                    max-width: 20%;
+                    background-color: #283044;
+                    height: 2px;
+                    border: none;
+                }
+              </style>
         </main>
-		<main class="wrapper stack gap-20 lg:gap-48">
+		<!-- <main class="wrapper stack gap-20 lg:gap-48">
 			<section class="section with-background with-cta">
 				<header class="section-header stack gap-2 lg:gap-4">
 					<h3>Selected Work</h3>
@@ -105,7 +158,7 @@ const projects = (await getCollection('work'))
 					</Grid>
 				</div>
 			</section>
-		</main>
+		</main> -->
 
 		<ContactCTA />
 	</div>
