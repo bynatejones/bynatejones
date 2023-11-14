@@ -1,23 +1,93 @@
 [
-	{
-		"date": "04/23",
-		"title": "Kyle Pugh College Football",
-		"type": "Documentary",
-		"role": "1st Assistant Camera",
-		"camera": "Sony Venice 2, Alexa Mini"
-	},
-	{ 
+    {
+        "date": "04/23",
+        "title": "Kyle Pugh College Football",
+        "type": "Documentary",
+        "role": "1st Assistant Camera",
+        "camera": "Sony Venice 2, Alexa Mini"
+    },
+    {
         "date": "03/23",
         "title": "Kyle Pugh College Football",
         "type": "Documentary",
         "role": "1st Assistant Camera",
         "camera": "Sony Venice 2, Alexa Mini"
     },
-	{ 
+    {
         "date": "02/23",
         "title": "Kyle Pugh College Football",
         "type": "Documentary",
         "role": "1st Assistant Camera",
-        "camera": "Sony Venice 2, Alexa Mini" 
+        "camera": "Sony Venice 2, Alexa Mini"
+    },
+    {
+        "date": "11/23",
+        "title": "Sammi Nassar - Heavyweight",
+        "type": "Music Video",
+        "role": "1st Assistant Camera",
+        "camera": "Sony Venice 2"
+    },
+    {
+        "date": "dfsf",
+        "title": "",
+        "type": "",
+        "role": "",
+        "camera": ""
+    },
+    {
+        "date": "",
+        "title": "",
+        "type": "",
+        "role": "",
+        "camera": ""
+    },
+    {
+        "date": "",
+        "title": "",
+        "type": "",
+        "role": "",
+        "camera": ""
+    },
+    {
+        "date": "",
+        "title": "",
+        "type": "",
+        "role": "",
+        "camera": ""
+    },
+    {
+        "date": "",
+        "title": "",
+        "type": "",
+        "role": "",
+        "camera": ""
+    },
+    {
+        "date": "",
+        "title": "",
+        "type": "",
+        "role": "",
+        "camera": ""
+    },
+    {
+        "date": "",
+        "title": "",
+        "type": "",
+        "role": "",
+        "camera": ""
+    },
+    {
+        "date": "",
+        "title": "",
+        "type": "",
+        "role": "",
+        "camera": ""
+    },
+    {
+        "date": "asf",
+        "title": "",
+        "type": "",
+        "role": "",
+        "camera": ""
     }
 ]
