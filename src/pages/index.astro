@@ -42,20 +42,29 @@ const projects = (await getCollection('work'))
                     <img
                         alt="Nate Jones portrait photo"
                         width="135"
-                        src="/assets/NateJones_HS.jpg"
+                        src="/assets/nate-camera.jpg"
                     />
                 </div>
                 
 			</header>
 			<!-- <Skills /> -->
 		</div>
-
-        <main class="wrapper stack gap-20 lg:gap-48">
-            <ul class="resume-list">
+        <script>
+            // this code adjusts the height of the list based on
+            // the number of items, so columns stay the same size
+            // and they don't overflow off the page
+            import ResumeData from '../data/resume.json';
+            var resumeCount = ResumeData.length;
+            var count = (resumeCount - 52) * 18;
+            document.getElementById('resume-list').style.maxHeight = 970 + count + "px";
+        </script>
+        <main class="resume-wrapper wrapper stack gap-20 lg:gap-48">
+            <ul id="resume-list" class="resume-list">
                 {
-                  ResumeData.map(({ date, title, type, role, camera }) => (
+                    // sort json reverse chronologically and map it to html
+                  ResumeData.sort((a, b) => parseInt(b.date) - parseInt(a.date)).map(({ date, title, type, role, camera }) => (
                     <li class="resume-list-item">
-                      <p class="resume-top-line">{date} ● <i>{title}</i> ({type})</p>
+                      <p class="resume-top-line">{date.split("")[2] + date.split("")[3] + "/" + date.split("")[0] + date.split("")[1]} ● <i>{title}</i> ({type})</p>
                       <p class="resume-middle-line">{role}</p>
                       <p class="resume-bottom-line">{camera}</p>
                     </li>
@@ -63,54 +72,6 @@ const projects = (await getCollection('work'))
                   ))
                 }
               </ul>
-              <style>
-                .resume-list {
-                    list-style-type: none;
-                    display: flex;
-                    flex-flow: wrap column;
-                    max-height: 800px;
-                    margin: auto;
-                    overflow: hidden;
-                    margin: 5px;
-                }
-
-                .resume-list-item {
-                    padding: 5px;
-                    margin: 10px 0;
-                    overflow: wrap;
-                    max-width: 18rem;
-                }
-
-                .resume-top-line {
-                    font-size: 0.8rem;
-                    line-height: 1rem;
-                    font-weight: 200;
-                    color: #a7a7a7
-                }
-                
-                .resume-middle-line {
-                    font-size: 1.3rem;
-                    line-height: 2rem;
-                    font-weight: 900;
-                    color: var(--accent-regular);
-                    font-variant-caps: small-caps;
-                }
-
-                .resume-bottom-line {
-                    font-size: 1.1rem;
-                    line-height: 1rem;
-                    color: #fff;
-                    font-weight: 500;
-                    font-variant-caps: all-small-caps;
-                }
-
-                .resume-list-divider {
-                    max-width: 20%;
-                    background-color: #283044;
-                    height: 2px;
-                    border: none;
-                }
-              </style>
         </main>
 		<!-- <main class="wrapper stack gap-20 lg:gap-48">
 			<section class="section with-background with-cta">
@@ -167,6 +128,58 @@ const projects = (await getCollection('work'))
 </BaseLayout>
 
 <style>
+    .resume-wrapper {
+        /* max-height: 970px; */
+    }
+    .resume-list {
+        list-style-type: none;
+        display: flex;
+        flex-flow: column wrap;
+        flex: 0 0 30%;
+        justify-content: space-evenly;
+        max-height: 970px;
+        overflow: hidden;
+        margin: 5px;
+    }
+
+    .resume-list-item {
+        padding: 0px;
+        margin: 10px 0;
+        overflow: wrap;
+        max-width: 20rem;
+        flex-grow: 1;
+    }
+
+    .resume-top-line {
+        font-size: 0.8rem;
+        line-height: .8rem;
+        font-weight: 200;
+        color: #a7a7a7
+    }
+    
+    .resume-middle-line {
+        font-size: 1.3rem;
+        line-height: 1.4rem;
+        font-weight: 900;
+        color: var(--accent-regular);
+        font-variant-caps: all-small-caps;
+    }
+
+    .resume-bottom-line {
+        font-size: 1.1rem;
+        line-height: 1rem;
+        color: #fff;
+        font-weight: 500;
+        font-variant-caps: all-small-caps;
+    }
+
+    .resume-list-divider {
+        max-width: 20%;
+        background-color: #283044;
+        height: 2px;
+        border: none;
+    }
+    
 	.hero {
 		display: flex;
 		flex-direction: column;
@@ -182,7 +195,7 @@ const projects = (await getCollection('work'))
 		aspect-ratio: 1;
 		object-fit: cover;
 		object-position: top;
-		border-radius: 25rem;
+		border-radius: 1rem;
 		box-shadow: var(--shadow-md);
 	}
 
@@ -202,7 +215,7 @@ const projects = (await getCollection('work'))
 
 		.hero img {
 			aspect-ratio: 1;
-			border-radius: 25rem;
+			border-radius: 1rem;
 			object-fit: cover;
 		}
 	}
