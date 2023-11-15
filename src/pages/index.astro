@@ -41,8 +41,8 @@ const projects = (await getCollection('work'))
                 <div style="width: 100%; text-align: right;">
                     <img
                         alt="Nate Jones portrait photo"
-                        width="135"
-                        src="/public/assets/nate-camera.jpg"
+                        width="250"
+                        src="/assets/nate-cut-out-01.png"
                     />
                 </div>
                 
@@ -192,11 +192,10 @@ const projects = (await getCollection('work'))
 	}
 
 	.hero img {
-		aspect-ratio: 1;
+		aspect-ratio: 1.2 / 1;
 		object-fit: cover;
 		object-position: top;
-		border-radius: 1rem;
-		box-shadow: var(--shadow-md);
+		border-radius: 0.7rem;
 	}
 
 	@media (min-width: 50em) {
@@ -214,9 +213,10 @@ const projects = (await getCollection('work'))
 		}
 
 		.hero img {
-			aspect-ratio: 1;
-			border-radius: 1rem;
+			aspect-ratio: 1.2 / 1;
+			border-radius: 0.5rem;
 			object-fit: cover;
+            /* border: 3px solid var(--accent-regular); */
 		}
 	}
 
