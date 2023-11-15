@@ -18,7 +18,7 @@ const projects = (await getCollection('work')).sort(
 	description=""
 >
 	<div class="stack gap-20">
-		<main class="wrapper stack gap-8">
+		<main class="wrapper stack gap-8" style="margin: auto;">
 			<Hero
 				title="Cinematography"
 				tagline=""
@@ -26,11 +26,28 @@ const projects = (await getCollection('work')).sort(
 			/>
 
             <Grid>
-                <iframe src="https://player.vimeo.com/video/271437390?h=655833f2e7" width="640" height="272" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+                <iframe src="https://player.vimeo.com/video/271437390?badge=0&amp;autopause=0&amp;quality_selector=1&amp;player_id=0&amp;app_id=58479" width="640" height="272" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" title="Nathaniel Jones Director of Photography Demo Reel"></iframe>
 
-                <iframe src="https://player.vimeo.com/video/257804857?h=1a91077a5d" width="640" height="272" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+                <iframe src="https://player.vimeo.com/video/257804857?badge=0&amp;autopause=0&amp;quality_selector=1&amp;player_id=0&amp;app_id=58479" width="640" height="272" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" title="Nathaniel Jones Director of Photography Demo Reel"></iframe>
             </Grid>
-            
+
+            <img class="portfolio-img" src="/assets/portfolio/faerie01.jpg"/>
+            <img class="portfolio-img" src="/assets/portfolio/faerie009.jpg"/>
+            <img class="portfolio-img" src="/assets/portfolio/faerie034.jpg"/>
+            <img class="portfolio-img" src="/assets/portfolio/faerie036.jpg"/>
+            <img class="portfolio-img" src="/assets/portfolio/faerie048.jpg"/>
+            <img class="portfolio-img" src="/assets/portfolio/grand-falls-2.jpg"/>
+            <img class="portfolio-img" src="/assets/portfolio/grand-falls-4.jpg"/>
+            <img class="portfolio-img" src="/assets/portfolio/sky-4-scaled.jpg"/>
+            <img class="portfolio-img" src="/assets/portfolio/still001.jpg"/>
+            <img class="portfolio-img" src="/assets/portfolio/still003-1-scaled.jpg"/>
+            <img class="portfolio-img" src="/assets/portfolio/still004.jpg"/>
+            <img class="portfolio-img" src="/assets/portfolio/still006.jpg"/>
+            <img class="portfolio-img" src="/assets/portfolio/still014.jpg"/>
+            <img class="portfolio-img" src="/assets/portfolio/still015.jpg"/>
+            <img class="portfolio-img" src="/assets/portfolio/still020.jpg"/>
+            <img class="portfolio-img" src="/assets/portfolio/still028.jpg"/>
+            <img class="portfolio-img" src="/assets/portfolio/yosemite.jpg"/>
 
 			<Grid variant="offset">
 				<!-- {
@@ -41,23 +58,7 @@ const projects = (await getCollection('work')).sort(
 					))
 				} -->
 
-                <img class="portfolio-img" src="/assets/portfolio/faerie01.jpg"/>
-                <img class="portfolio-img" src="/assets/portfolio/faerie009.jpg"/>
-                <img class="portfolio-img" src="/assets/portfolio/faerie034.jpg"/>
-                <img class="portfolio-img" src="/assets/portfolio/faerie036.jpg"/>
-                <img class="portfolio-img" src="/assets/portfolio/faerie048.jpg"/>
-                <img class="portfolio-img" src="/assets/portfolio/grand-falls-2.jpg"/>
-                <img class="portfolio-img" src="/assets/portfolio/grand-falls-4.jpg"/>
-                <img class="portfolio-img" src="/assets/portfolio/sky-4-scaled.jpg"/>
-                <img class="portfolio-img" src="/assets/portfolio/still001.jpg"/>
-                <img class="portfolio-img" src="/assets/portfolio/still003-1-scaled.jpg"/>
-                <img class="portfolio-img" src="/assets/portfolio/still004.jpg"/>
-                <img class="portfolio-img" src="/assets/portfolio/still006.jpg"/>
-                <img class="portfolio-img" src="/assets/portfolio/still014.jpg"/>
-                <img class="portfolio-img" src="/assets/portfolio/still015.jpg"/>
-                <img class="portfolio-img" src="/assets/portfolio/still020.jpg"/>
-                <img class="portfolio-img" src="/assets/portfolio/still028.jpg"/>
-                <img class="portfolio-img" src="/assets/portfolio/yosemite.jpg"/>
+                
 			</Grid>
 		</main>
 		<ContactCTA />
@@ -67,5 +68,6 @@ const projects = (await getCollection('work')).sort(
 <style>
     .portfolio-img {
         border-radius: 0.6rem;
+        margin: auto;
     }
 </style>
