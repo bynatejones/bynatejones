@@ -253,3 +253,22 @@ h5 {
 		gap: 12rem;
 	}
 }
+
+@media only screen and (max-width: 1400px) {
+    #resume-list {
+        max-height: 1300px !important;
+    }
+}
+
+@media only screen and (max-width: 1100px) {
+    #resume-list {
+        max-height: 1900px !important;
+    }
+}
+
+@media only screen and (max-width: 775px) {
+    #resume-list {
+        max-height: 4000px !important;
+        display: block;
+    }
+}
