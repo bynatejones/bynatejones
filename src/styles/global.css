@@ -256,19 +256,19 @@ h5 {
 
 @media only screen and (max-width: 1400px) {
     #resume-list {
-        max-height: 1300px !important;
+        max-height: 1400px !important;
     }
 }
 
 @media only screen and (max-width: 1100px) {
     #resume-list {
-        max-height: 1900px !important;
+        max-height: 2800px !important;
     }
 }
 
 @media only screen and (max-width: 775px) {
     #resume-list {
-        max-height: 4000px !important;
+        max-height: 100% !important;
         display: block;
     }
 
