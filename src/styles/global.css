@@ -264,6 +264,11 @@ h5 {
     #resume-list {
         max-height: 2800px !important;
     }
+
+    .portfolio-videos {
+        max-width: 100% !important;
+        width: 100% !important;
+    }
 }
 
 @media only screen and (max-width: 775px) {
@@ -282,5 +287,9 @@ h5 {
         margin: auto;
         width: 100% !important;
         max-width: 400px;
+    }
+
+    .hero .title {
+        font-size: 2.5rem !important;
     }
 }
