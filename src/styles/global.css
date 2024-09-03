@@ -271,4 +271,16 @@ h5 {
         max-height: 4000px !important;
         display: block;
     }
+
+    .nate-photo {
+        margin: auto;
+        width: 100% !important;
+        max-width: 400px;
+    }
+
+    .nate-photo img {
+        margin: auto;
+        width: 100% !important;
+        max-width: 400px;
+    }
 }
