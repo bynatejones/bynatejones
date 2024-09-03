@@ -369,5 +369,145 @@
         "type": "Feature",
         "role": "1st Assistant Camera",
         "camera": "Red Scarlet-W"
+    },
+    {
+        "date": "2402",
+        "title": "Tommy Parker - 'The Parkers'",
+        "type": "Music Video",
+        "role": "1st Assistant Camera",
+        "camera": "Alexa Mini LF"
+    },
+    {
+        "date": "2402",
+        "title": "YUZY",
+        "type": "Commercial",
+        "role": "1st Assistant Camera",
+        "camera": "Sony Venice"
+    },
+    {
+        "date": "2403",
+        "title": "Dress",
+        "type": "Music Video",
+        "role": "1st Assistant Camera",
+        "camera": "Red Scarlet-W"
+    },
+    {
+        "date": "2404",
+        "title": "WIN",
+        "type": "Commercial",
+        "role": "1st Assistant Camera",
+        "camera": "Sony Venice"
+    },
+    {
+        "date": "2405",
+        "title": "JoJo Siwa - 'Guilty Pleasure'",
+        "type": "Music Video",
+        "role": "1st Assistant Camera - B Cam",
+        "camera": "Red Monstro, Freefly Ember"
+    },
+    {
+        "date": "2405",
+        "title": "JoJo Siwa - 'Choose Your Fighter'",
+        "type": "Music Video",
+        "role": "1st Assistant Camera - B Cam",
+        "camera": "Red Monstro, Freefly Ember"
+    },
+    {
+        "date": "2405",
+        "title": "Pierce The Veil",
+        "type": "Music Video",
+        "role": "1st Assistant Camera",
+        "camera": "Red Monstro, Gates Underwater Rig"
+    },
+    {
+        "date": "2406",
+        "title": "Amazon Studios - 'Rings of Power'",
+        "type": "Live Event",
+        "role": "1st Assistant Camera - A Cam",
+        "camera": "Red V-Raptor, Red Komodo"
+    },
+    {
+        "date": "2406",
+        "title": "Merlin Mojave - Aerospace",
+        "type": "Commercial",
+        "role": "1st Assistant Camera",
+        "camera": "Alexa 35, Alexa Mini, Red Komodo"
+    },
+    {
+        "date": "2407",
+        "title": "Tyga - 'Uh Huh'",
+        "type": "Music Video",
+        "role": "2nd Assistant Camera",
+        "camera": "Alexa Mini LF, Arri SR2"
+    },
+    {
+        "date": "2407",
+        "title": "Ice Cube - 'Ego'",
+        "type": "Music Video",
+        "role": "2nd Assistant Camera",
+        "camera": "Alexa Mini LF, Red Komodo"
+    },
+    {
+        "date": "2407",
+        "title": "GXTP - 'My Devil At Home'",
+        "type": "Music Video",
+        "role": "2nd Assistant Camera",
+        "camera": "Sony Venice"
+    },
+    {
+        "date": "2407",
+        "title": "The Understudies",
+        "type": "Short",
+        "role": "1st Assistant Camera",
+        "camera": "Alexa Mini"
+    },
+    {
+        "date": "2407",
+        "title": "Final Sale",
+        "type": "Short",
+        "role": "1st Assistant Camera",
+        "camera": "Sony Venice"
+    },
+    {
+        "date": "2407",
+        "title": "One Republic - 'Hurt'",
+        "type": "Music Video",
+        "role": "1st Assistant Camera - B Cam",
+        "camera": "Red Monstro, Freefly Ember"
+    },
+    {
+        "date": "2408",
+        "title": "Netflix - 'Woman of the Hour'",
+        "type": "EPK",
+        "role": "1st Assistant Camera - A Cam",
+        "camera": "Alexa Mini x3"
+    },
+    {
+        "date": "2408",
+        "title": "Almost Friday - Johnny Manziel",
+        "type": "Commercial",
+        "role": "1st Assistant Camera",
+        "camera": "Alexa Mini LF, Red Komodo"
+    },
+    {
+        "date": "2408",
+        "title": "LifeMD",
+        "type": "Commercial",
+        "role": "1st Assistant Camera",
+        "camera": "Red V-Raptor, Red Komodo"
+    },
+    {
+        "date": "2408",
+        "title": "Offbrand - Ludwig's Streamer Games",
+        "type": "Live Event",
+        "role": "1st Assistant Camera - Steadicam A",
+        "camera": "Sony FX6"
+    },
+    {
+        "date": "2408",
+        "title": "Our Place",
+        "type": "Commercial",
+        "role": "1st Assistant Camera",
+        "camera": "Alexa 35"
     }
 ]
