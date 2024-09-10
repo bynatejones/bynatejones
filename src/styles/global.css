@@ -333,6 +333,10 @@ h5 {
         margin: auto;
         margin-top: 0.8rem;
     }
+
+    .hero-stack {
+        margin-top: 2rem;
+    }
 }
 
 .resume-date {
@@ -346,4 +350,12 @@ h5 {
     box-shadow: 0px 8px 24px #0e0c02;
     max-width: 1200px;
     border: 2px solid #f0c91d;
+}
+
+.socials a {
+    color: #f0c91d !important;
+    font-size: 1rem;
+    border: 2px solid #f0c91d;
+    border-radius: 6px;
+    padding: 0.7rem 1.3rem;
 }
