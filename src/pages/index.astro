@@ -30,11 +30,13 @@ const projects = (await getCollection('work'))
 
 <BaseLayout>
 	<div class="stack gap-20 lg:gap-2">
-		<div class="wrapper stack gap-8 lg:gap-20">
+		<div class="wrapper stack gap-8 lg:gap-20 header">
 			<header class="hero">
 				<Hero
 					title="Nate Jones"
-					tagline="ICG 600 1st Assistant Camera, Cinematographer and Colorist based out of Los Angeles, CA"
+                    icon="/assets/iatse600_circle_640x640.png"
+					tagline="ICG 600 1st Assistant Camera, Cinematographer and Colorist"
+                    taglinetwo="LOS ANGELES"
 					align="start"
 				>
 				</Hero>
@@ -56,17 +58,17 @@ const projects = (await getCollection('work'))
             import ResumeData from '../data/resume.json';
             var resumeCount = ResumeData.length;
             var count = (resumeCount - 52) * 18;
-            document.getElementById('resume-list').style.maxHeight = 970 + count + "px";
+            document.getElementById('resume-list').style.maxHeight = 1020 + count + "px";
         </script>
-        <main class="resume-wrapper wrapper stack gap-20 lg:gap-48">
+        <main class="resume-wrapper wrapper stack gap-2 lg:gap-48">
             <ul id="resume-list" class="resume-list">
                 {
                     // sort json reverse chronologically and map it to html
                   ResumeData.sort((a, b) => parseInt(b.date) - parseInt(a.date)).map(({ date, title, type, role, camera }) => (
                     <li class="resume-list-item">
-                      <p class="resume-top-line">{date.split("")[2] + date.split("")[3] + "/" + date.split("")[0] + date.split("")[1]} ● <i>{title}</i> ({type})</p>
-                      <p class="resume-middle-line">{role}</p>
-                      <p class="resume-bottom-line">{camera}</p>
+                      <p class="resume-top-line"><i><span class="resume-date">{date.split("")[2] + date.split("")[3] + "/" + date.split("")[0] + date.split("")[1]} ● {role}</span></i></p>
+                      <p class="resume-middle-line">{title}</p>
+                      <p class="resume-bottom-line"> {type} // {camera}</p>
                     </li>
                     <hr class="resume-list-divider"/>
                   ))
@@ -123,7 +125,7 @@ const projects = (await getCollection('work'))
 			</section>
 		</main> -->
 
-		<ContactCTA />
+		<!-- <ContactCTA /> -->
 	</div>
 </BaseLayout>
 

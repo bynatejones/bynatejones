@@ -254,13 +254,13 @@ h5 {
 	}
 }
 
-@media only screen and (max-width: 1400px) {
+@media only screen and (max-width: 1300px) {
     #resume-list {
-        max-height: 1400px !important;
+        max-height: 2000px !important;
     }
 }
 
-@media only screen and (max-width: 1100px) {
+@media only screen and (max-width: 900px) {
     #resume-list {
         max-height: 2800px !important;
     }
@@ -292,4 +292,74 @@ h5 {
     .hero .title {
         font-size: 2.5rem !important;
     }
+
+    .wrapper {
+        padding-inline: 0;
+    }
+    
+    .resume-top-line {
+        font-size: 0.9rem !important;
+        line-height: 1rem !important;
+        text-align: center;
+    }
+
+    .resume-middle-line {
+        font-size: 1.5rem !important;
+        line-height: 1.2rem !important;
+        text-align: center;
+    }
+
+    .resume-bottom-line {
+        font-size: 1.2rem !important;
+        line-height: 1.3rem !important;
+        text-align: center;
+    }
+
+    .resume-list-divider {
+        max-width: 85% !important;
+        padding: 0 !important;
+    }
+
+    .stack {
+        display: block;
+    }
+
+    .tagline {
+        margin-top: 0.5rem;
+    }
+
+    .taglinetwo {
+        text-align: center;
+        margin: auto;
+        margin-top: 0.8rem;
+    }
+
+    .hero-stack {
+        margin-top: 2rem;
+    }
+}
+
+.resume-date {
+    font-size: 0.8rem !important;
+}
+
+.header {
+    background-color: #141926;
+    padding: 0.5rem 0rem;
+    border-radius: 12px;
+    box-shadow: 0px 8px 24px #0e0c02;
+    max-width: 1200px;
+    border: 2px solid #f0c91d;
+}
+
+.socials a {
+    color: #f0c91d !important;
+    font-size: 1rem;
+    border: 2px solid #f0c91d;
+    border-radius: 6px;
+    padding: 0.7rem 1.3rem;
+}
+
+.socials {
+    margin: 5px;
 }
