@@ -323,14 +323,27 @@ h5 {
     .stack {
         display: block;
     }
+
+    .tagline {
+        margin-top: 0.5rem;
+    }
+
+    .taglinetwo {
+        text-align: center;
+        margin: auto;
+        margin-top: 0.8rem;
+    }
 }
 
 .resume-date {
     font-size: 0.8rem !important;
 }
 
-.hero .tagline {
-    font-size: 1.5rem;
-    color: #f0c91c !important;
-    white-space: pre-line;
+.header {
+    background-color: #141926;
+    padding: 0.5rem 0rem;
+    border-radius: 12px;
+    box-shadow: 0px 8px 24px #0e0c02;
+    max-width: 1200px;
+    border: 2px solid #f0c91d;
 }
