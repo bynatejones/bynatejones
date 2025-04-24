@@ -252,6 +252,10 @@ h5 {
 	.lg\:gap-48 {
 		gap: 12rem;
 	}
+	
+	.nate-photo img {
+		aspect-ratio: unset !important;
+	}
 }
 
 @media only screen and (max-width: 1300px) {
@@ -280,13 +284,14 @@ h5 {
     .nate-photo {
         margin: auto;
         width: 100% !important;
-        max-width: 400px;
+        max-width: 1326px;
     }
 
     .nate-photo img {
         margin: auto;
         width: 100% !important;
-        max-width: 400px;
+        max-width: 1326px;
+		aspect-ratio: unset !important;
     }
 
     .hero .title {
