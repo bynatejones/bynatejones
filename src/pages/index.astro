@@ -11,6 +11,7 @@ import Hero from '../components/Hero.astro';
 import Icon from '../components/Icon.astro';
 import Pill from '../components/Pill.astro';
 import PortfolioPreview from '../components/PortfolioPreview.astro';
+import BrandCloud from '../components/BrandCloud.astro';
 
 // Page section components
 import ContactCTA from '../components/ContactCTA.astro';
@@ -29,32 +30,17 @@ const projects = (await getCollection('work'))
 ---
 
 <BaseLayout>
-	<div class="stack gap-20 lg:gap-2">
-		<div class="wrapper stack gap-8 lg:gap-20 header">
-			<header class="hero">
-				<!-- <Hero
-					title="Nate Jones"
-                    icon="/assets/iatse600_circle_640x640.png"
-					tagline="ICG 600 1st Assistant Camera, Cinematographer and Colorist"
-                    taglinetwo="LOS ANGELES"
-					align="start"
-				>
-				</Hero>
-                <div class="nate-photo" style="width: 100%; text-align: right;">
-                    <img
-                        alt="Nate Jones portrait photo"
-                        width="250"
-                        src="/assets/nate-cut-out-02.png"
-                    />
-                </div> -->
+    <div class="stack gap-20 lg:gap-2">
+        <div class="wrapper stack gap-8 lg:gap-20 header">
+            <header class="hero">
                 <Hero
-					title="Nate Jones"
+                    title="Nate Jones"
                     icon="/assets/iatse600_circle_640x640.png"
-					tagline="ICG 600 1st Assistant Camera, Cinematographer and Colorist"
+                    tagline="ICG 600 1st Assistant Camera, Cinematographer and Colorist"
                     taglinetwo="LOS ANGELES / TRAVEL-READY"
-					align="start"
-				>
-				</Hero>
+                    align="start"
+                >
+                </Hero>
                 <div class="nate-photo" style="width: 100%; text-align: right;">
                     <img
                         alt="Nate Jones portrait photo"
@@ -62,9 +48,12 @@ const projects = (await getCollection('work'))
                         src="/assets/nate-profile-2.jpg"
                     />
                 </div>
-			</header>
-			<!-- <Skills /> -->
-		</div>
+            </header>
+        </div>
+
+        <!-- Add the BrandCloud component here -->
+        <BrandCloud />
+
         <script>
             // this code adjusts the height of the list based on
             // the number of items, so columns stay the same size
