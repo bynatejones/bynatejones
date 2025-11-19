@@ -170,7 +170,7 @@ const documentaryProjects = [
 		description: "Director of Photography"
 	},
 	{
-		title: "Netflix - Tech",
+		title: "Netflix Tech",
 		thumbnail: "/assets/thumbnails/still004.jpg",
 		videoUrl: "https://vimeo.com/example1",
 		description: "1st Assistant Camera"
@@ -225,18 +225,18 @@ const liveEventProjects = [
         <div class="wrapper stack gap-8 lg:gap-20 header">
             <header class="hero">
                 <Hero
-                    title="Nate Jones"
+                    title="NATE JONES"
                     icon="/assets/iatse600_circle_640x640.png"
-                    tagline="ICG 600 1st Assistant Camera, Cinematographer and Colorist"
-                    taglinetwo="LOS ANGELES / TRAVEL-READY"
+                    tagline="ICG 600 1st Assistant Camera ● Cinematographer ● Colorist"
+                    taglinetwo="LOS ANGELES // TRAVEL-READY"
                     align="start"
                 >
                 </Hero>
-                <div class="nate-photo" style="width: 100%; text-align: right;">
+                <div class="nate-photo" style="text-align: right;">
                     <img
                         alt="Nate Jones portrait photo"
-                        width="1326"
                         src="/assets/nate-profile-2.jpg"
+                        style="width: 250px; height: 250px; object-fit: cover; text-align: right;"
                     />
                 </div>
             </header>
@@ -246,7 +246,7 @@ const liveEventProjects = [
         <BrandCloud />
 
 		<!-- Add this after BrandCloud component -->
-		<div class="featured-work wrapper">
+		<div class="featured-work-wrapper">
 			<FeaturedWorkSection 
 				title="Commercials" 
 				projects={commercialProjects} 
@@ -268,6 +268,10 @@ const liveEventProjects = [
 				projects={liveEventProjects} 
 			/>
 		</div>
+
+        <div style="max-width: 1200px; width: 90%; margin: 1rem auto;">
+            <hr style="border: 0; border-top: 2px solid #f0c91c;"/>
+        </div>
 
         <script>
             // this code adjusts the height of the list based on
