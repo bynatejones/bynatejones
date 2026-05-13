@@ -197,7 +197,7 @@
     },
     {
         "date": "2211",
-        "title": "Lucku - 'Made My Day'",
+        "title": "Lucky - 'Made My Day'",
         "type": "Music Video",
         "role": "1st Assistant Camera",
         "camera": "Alexa Mini LF"
@@ -414,10 +414,10 @@
     },
     {
         "date": "2405",
-        "title": "Pierce The Veil",
+        "title": "Pierce The Veil - 'Karma Police'",
         "type": "Music Video",
         "role": "1st Assistant Camera",
-        "camera": "Red Monstro, Gates Underwater Rig"
+        "camera": "Red Monstro, Underwater Rig"
     },
     {
         "date": "2406",
@@ -509,5 +509,180 @@
         "type": "Commercial",
         "role": "1st Assistant Camera",
         "camera": "Alexa 35"
+    },
+    {
+        "date": "2409",
+        "title": "Honda x Team Liquid",
+        "type": "Commercial",
+        "role": "1st Assistant Camera",
+        "camera": "Alexa Mini"
+    },
+    {
+        "date": "2409",
+        "title": "Nissan",
+        "type": "Commercial",
+        "role": "2nd Assistant Camera",
+        "camera": "Sony Venice"
+    },
+    {
+        "date": "2410",
+        "title": "Amazon Music Live Season 3",
+        "type": "Live Event",
+        "role": "Steadicam Assist",
+        "camera": "Sony Venice"
+    },
+    {
+        "date": "2410",
+        "title": "Tadpole",
+        "type": "Short",
+        "role": "1st Assistant Camera",
+        "camera": "Alexa Mini"
+    },
+    {
+        "date": "2410",
+        "title": "Ryan Harrow",
+        "type": "Documentary",
+        "role": "Director of Photography",
+        "camera": "Sony Venice 2"
+    },
+    {
+        "date": "2411",
+        "title": "Netflix Tech",
+        "type": "Documentary",
+        "role": "1st Assistant Camera",
+        "camera": "Red V-Raptor"
+    },
+    {
+        "date": "2412",
+        "title": "Uqora",
+        "type": "Commercial",
+        "role": "1st Assistant Camera - A Camera",
+        "camera": "Alexa 35"
+    },
+    {
+        "date": "2501",
+        "title": "RexMD",
+        "type": "Commercial",
+        "role": "1st Assistant Camera",
+        "camera": "Red V-Raptor"
+    },
+    {
+        "date": "2501",
+        "title": "DRMTLGY",
+        "type": "Commercial",
+        "role": "1st Assistant Camera",
+        "camera": "Alexa Mini, Red Scarlet-W"
+    },
+    {
+        "date": "2501",
+        "title": "UCLA - Alumni",
+        "type": "Documentary",
+        "role": "1st Assistant Camera",
+        "camera": "Alexa 35"
+    },
+    {
+        "date": "2502",
+        "title": "Mesmera",
+        "type": "Short",
+        "role": "1st Assistant Camera",
+        "camera": "Alexa Mini LF"
+    },
+    {
+        "date": "2503",
+        "title": "Mobile X",
+        "type": "Commercial",
+        "role": "1st Assistant Camera",
+        "camera": "Alexa 35"
+    },
+    {
+        "date": "2503",
+        "title": "Helicity",
+        "type": "Commercial",
+        "role": "1st Assistant Camera",
+        "camera": "Alexa 35"
+    },
+    {
+        "date": "2503",
+        "title": "Pawsync",
+        "type": "Commercial",
+        "role": "1st Assistant Camera",
+        "camera": "Red Monstro"
+    },
+    {
+        "date": "2505",
+        "title": "DIME Beauty",
+        "type": "Commercial",
+        "role": "1st Assistant Camera",
+        "camera": "Alexa Mini LF"
+    },
+    {
+        "date": "2505",
+        "title": "Anna Margo - 'Brain Rot'",
+        "type": "Music Video",
+        "role": "1st Assistant Camera",
+        "camera": "Red Scarlet-W Dragon"
+    },
+    {
+        "date": "2506",
+        "title": "Scraps",
+        "type": "Short",
+        "role": "1st Assistant Camera",
+        "camera": "Alexa Mini"
+    },
+    {
+        "date": "2507",
+        "title": "Jiffy x Dysrupt",
+        "type": "Commercial",
+        "role": "1st Assistant Camera",
+        "camera": "Alexa Mini"
+    },
+    {
+        "date": "2507",
+        "title": "The Ink Off",
+        "type": "Episodic",
+        "role": "1st Assistant Camera",
+        "camera": "Alexa Mini"
+    },
+    {
+        "date": "2507",
+        "title": "John Vaughn - 'Wolf'",
+        "type": "Music Video",
+        "role": "1st Assistant Camera",
+        "camera": "Alexa Mini"
+    },
+    {
+        "date": "2508",
+        "title": "We Used To Hunt",
+        "type": "Short",
+        "role": "1st Assistant Camera",
+        "camera": "Sony Venice"
+    },
+    {
+        "date": "2509",
+        "title": "Goldman Sachs 10,000 SB",
+        "type": "Commercial",
+        "role": "1st Assistant Camera",
+        "camera": "Sony Burano"
+    },
+    {
+        "date": "2510",
+        "title": "Hummingbird",
+        "type": "Feature",
+        "role": "2nd Assistant Camera",
+        "camera": "Alexa Mini"
+    },
+    {
+        "date": "2510",
+        "title": "Cosori Iconic",
+        "type": "Commercial",
+        "role": "1st Assistant Camera",
+        "camera": "Alexa Mini LF"
+    },
+    {
+        "date": "2510",
+        "title": "Almost Friday TV - 'Donations'",
+        "type": "Short",
+        "role": "1st Assistant Camera",
+        "camera": "Red Komodo"
     }
 ]

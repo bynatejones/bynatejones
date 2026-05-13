@@ -11,6 +11,8 @@ import Hero from '../components/Hero.astro';
 import Icon from '../components/Icon.astro';
 import Pill from '../components/Pill.astro';
 import PortfolioPreview from '../components/PortfolioPreview.astro';
+import BrandCloud from '../components/BrandCloud.astro';
+import FeaturedWorkSection from '../components/FeaturedWorkSection.astro';
 
 // Page section components
 import ContactCTA from '../components/ContactCTA.astro';
@@ -24,33 +26,253 @@ const projects = (await getCollection('work'))
 	.sort((a, b) => b.data.publishDate.valueOf() - a.data.publishDate.valueOf())
 	.slice(0, 4);
 
+// Add this with your other const declarations
+const commercialProjects = [
+	{
+		title: "Marvel x Adidas x Lexus",
+		thumbnail: "/assets/thumbnails/still004.jpg",
+		videoUrl: "https://vimeo.com/example1",
+		description: "Camera Operator"
+	},
+	{
+		title: "Nike SB - '20 Years'",
+		thumbnail: "/assets/thumbnails/still004.jpg",
+		videoUrl: "https://vimeo.com/example1",
+		description: "1st Assistant Camera"
+	},
+	{
+		title: "Jake Paul - WIN",
+		thumbnail: "/assets/thumbnails/still004.jpg",
+		videoUrl: "https://vimeo.com/example1",
+		description: "1st Assistant Camera"
+	},
+	{
+		title: "Honda x Team Liquid",
+		thumbnail: "/assets/thumbnails/still004.jpg",
+		videoUrl: "https://vimeo.com/example1",
+		description: "1st Assistant Camera"
+	},
+	{
+		title: "Nissan",
+		thumbnail: "/assets/thumbnails/still004.jpg",
+		videoUrl: "https://vimeo.com/example1",
+		description: "2nd Assistant Camera"
+	},
+	{
+		title: "Universal Hydrogen",
+		thumbnail: "/assets/thumbnails/still004.jpg",
+		videoUrl: "https://vimeo.com/example1",
+		description: "1st Assistant Camera"
+	},
+	{
+		title: "Samsung Event",
+		thumbnail: "/assets/thumbnails/still004.jpg",
+		videoUrl: "https://vimeo.com/example1",
+		description: "1st Assistant Camera"
+	},
+	{
+		title: "Ruffles - A'ja Wilson",
+		thumbnail: "/assets/thumbnails/still004.jpg",
+		videoUrl: "https://vimeo.com/example1",
+		description: "1st Assistant Camera"
+	}
+];
+
+const musicVideoProjects = [
+	{
+		title: "One Republic ft. Jelly Roll - 'Hurt'",
+		thumbnail: "/assets/thumbnails/still004.jpg",
+		videoUrl: "https://vimeo.com/example1",
+		description: "1st Assistant Camera - B Cam"
+	},
+	{
+		title: "Chris Brown - 'Psychic'",
+		thumbnail: "/assets/thumbnails/still004.jpg",
+		videoUrl: "https://vimeo.com/example1",
+		description: "1st Assistant Camera - B Cam"
+	},
+	{
+		title: "Machine Gun Kelly - 'Maybe'",
+		thumbnail: "/assets/thumbnails/still004.jpg",
+		videoUrl: "https://vimeo.com/example1",
+		description: "2nd Assistant Camera"
+	},
+	{
+		title: "JoJo Siwa - 'Guilty Pleasure'",
+		thumbnail: "/assets/thumbnails/still004.jpg",
+		videoUrl: "https://vimeo.com/example1",
+		description: "1st Assistant Camera - B Cam"
+	},
+	{
+		title: "JoJo Siwa - 'Choose Your Fighter'",
+		thumbnail: "/assets/thumbnails/still004.jpg",
+		videoUrl: "https://vimeo.com/example1",
+		description: "1st Assistant Camera - B Cam"
+	},
+	{
+		title: "Tyga - 'Uh Huh'",
+		thumbnail: "/assets/thumbnails/still004.jpg",
+		videoUrl: "https://vimeo.com/example1",
+		description: "2nd Assistant Camera"
+	},
+	{
+		title: "Ice Cube - 'Ego'",
+		thumbnail: "/assets/thumbnails/still004.jpg",
+		videoUrl: "https://vimeo.com/example1",
+		description: "2nd Assistant Camera"
+	}
+];
+
+const narrativeProjects = [
+	{
+		title: "Candy Flip",
+		thumbnail: "/assets/thumbnails/still004.jpg",
+		videoUrl: "https://vimeo.com/example1",
+		description: "1st Assistant Camera - B Cam // Feature"
+	},
+	{
+		title: "My Partner's Wife",
+		thumbnail: "/assets/thumbnails/still004.jpg",
+		videoUrl: "https://vimeo.com/example1",
+		description: "1st Assistant Camera // Feature"
+	},
+	{
+		title: "A Place of Bones",
+		thumbnail: "/assets/thumbnails/still004.jpg",
+		videoUrl: "https://vimeo.com/example1",
+		description: "Set Lighting Technician // Feature"
+	},
+	{
+		title: "Havoc Hunter",
+		thumbnail: "/assets/thumbnails/still004.jpg",
+		videoUrl: "https://vimeo.com/example1",
+		description: "1st Assistant Camera // Feature"
+	},
+	{
+		title: "Last Train to Fortune",
+		thumbnail: "/assets/thumbnails/still004.jpg",
+		videoUrl: "https://vimeo.com/example1",
+		description: "2nd Assistant Camera - A Cam // Feature"
+	},
+	{
+		title: "The Understudies",
+		thumbnail: "/assets/thumbnails/still004.jpg",
+		videoUrl: "https://vimeo.com/example1",
+		description: "1st Assistant Camera // Short"
+	}
+];
+
+const documentaryProjects = [
+	{
+		title: "Ryan Harrow",
+		thumbnail: "/assets/thumbnails/still004.jpg",
+		videoUrl: "https://vimeo.com/example1",
+		description: "Director of Photography"
+	},
+	{
+		title: "Netflix Tech",
+		thumbnail: "/assets/thumbnails/still004.jpg",
+		videoUrl: "https://vimeo.com/example1",
+		description: "1st Assistant Camera"
+	},
+	{
+		title: "8th Year",
+		thumbnail: "/assets/thumbnails/still004.jpg",
+		videoUrl: "https://vimeo.com/example1",
+		description: "1st Assistant Camera, Colorist"
+	},
+	{
+		title: "ESPN 30 for 30 - 'FaZe Clan'",
+		thumbnail: "/assets/thumbnails/still004.jpg",
+		videoUrl: "https://vimeo.com/example1",
+		description: "1st Assistant Camera"
+	}
+];
+
+const liveEventProjects = [
+	{
+		title: "Amazon Studios - 'Rings of Power'",
+		thumbnail: "/assets/thumbnails/still004.jpg",
+		videoUrl: "https://vimeo.com/example1",
+		description: "1st Assistant Camera - A Cam"
+	},
+	{
+		title: "Amazon Music Live Season 3",
+		thumbnail: "/assets/thumbnails/still004.jpg",
+		videoUrl: "https://vimeo.com/example1",
+		description: "Steadicam Assist"
+	},
+	{
+		title: "Offbrand - Ludwig's Streamer Games",
+		thumbnail: "/assets/thumbnails/still004.jpg",
+		videoUrl: "https://vimeo.com/example1",
+		description: "1st Assistant Camera - Steadicam A"
+	},
+	{
+		title: "Netflix - 'Woman of the Hour' EPK",
+		thumbnail: "/assets/thumbnails/still004.jpg",
+		videoUrl: "https://vimeo.com/example1",
+		description: "1st Assistant Camera - A Cam"
+	}
+];
+
 // Full Astro Component Syntax:
 // https://docs.astro.build/core-concepts/astro-components/
 ---
 
 <BaseLayout>
-	<div class="stack gap-20 lg:gap-2">
-		<div class="wrapper stack gap-8 lg:gap-20 header">
-			<header class="hero">
-				<Hero
-					title="Nate Jones"
+    <div class="stack gap-20 lg:gap-2">
+        <div class="wrapper stack gap-8 lg:gap-20 header">
+            <header class="hero">
+                <Hero
+                    title="NATE JONES"
                     icon="/assets/iatse600_circle_640x640.png"
-					tagline="ICG 600 1st Assistant Camera, Cinematographer and Colorist"
-                    taglinetwo="LOS ANGELES"
-					align="start"
-				>
-				</Hero>
-                <div class="nate-photo" style="width: 100%; text-align: right;">
+                    tagline="ICG 600 1st Assistant Camera ● Cinematographer ● Colorist"
+                    taglinetwo="LOS ANGELES // TRAVEL-READY"
+                    align="start"
+                >
+                </Hero>
+                <div class="nate-photo" style="text-align: right;">
                     <img
                         alt="Nate Jones portrait photo"
-                        width="250"
-                        src="/assets/nate-cut-out-02.png"
+                        src="/assets/nate-profile-2.jpg"
+                        style="width: 250px; height: 250px; object-fit: cover; text-align: right;"
                     />
                 </div>
-                
-			</header>
-			<!-- <Skills /> -->
-		</div>
+            </header>
+        </div>
+
+        <!-- Add the BrandCloud component here -->
+        <BrandCloud />
+
+		<!-- Add this after BrandCloud component -->
+		<!-- <div class="featured-work-wrapper">
+			<FeaturedWorkSection 
+				title="Commercials" 
+				projects={commercialProjects} 
+			/>
+			<FeaturedWorkSection 
+				title="Music Videos" 
+				projects={musicVideoProjects} 
+			/>
+			<FeaturedWorkSection 
+				title="Narrative" 
+				projects={narrativeProjects} 
+			/>
+            <FeaturedWorkSection 
+				title="Documentaries" 
+				projects={documentaryProjects} 
+			/>
+            <FeaturedWorkSection 
+				title="Live Events" 
+				projects={liveEventProjects} 
+			/>
+		</div> -->
+
+        <div style="max-width: 1200px; width: 90%; margin: 1rem auto;">
+            <hr style="border: 0; border-top: 2px solid #f0c91c;"/>
+        </div>
+
         <script>
             // this code adjusts the height of the list based on
             // the number of items, so columns stay the same size
@@ -126,7 +348,7 @@ const projects = (await getCollection('work'))
 		</main> -->
 
 		<!-- <ContactCTA /> -->
-	</div>
+    </div>
 </BaseLayout>
 
 <style>
@@ -324,4 +546,11 @@ const projects = (await getCollection('work'))
 			height: 9.5rem;
 		}
 	}
+
+    .featured-work {
+        margin: 3rem auto;
+        display: flex;
+        flex-direction: column;
+        gap: 4rem;
+    }
 </style>

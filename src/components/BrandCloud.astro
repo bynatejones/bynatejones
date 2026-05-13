@@ -1,0 +1,80 @@
+---
+// You can adjust the list of brands and their logos
+const brands = [
+  { name: 'Netflix', logo: '/assets/brands/netflix.png' },
+  { name: 'Amazon Studios', logo: '/assets/brands/amazon-studios.png' },
+  { name: 'Warner Bros', logo: '/assets/brands/warner-bros.png' },
+  { name: 'Lexus', logo: '/assets/brands/lexus.png' },
+  { name: 'Nissan', logo: '/assets/brands/nissan.png' },
+  // Add more brands as needed
+];
+---
+
+<div class="brands-container">
+  <div class="brands-grid">
+    {
+      brands.map((brand) => (
+        <div class="brand-item">
+          <img src={brand.logo} alt={`${brand.name} logo`} />
+        </div>
+      ))
+    }
+  </div>
+</div>
+
+<style>
+  .brands-container {
+    padding: 2rem 0;
+    /* box-shadow: inset 0px 0px 36px black !important; */
+    background-color: transparent;
+    width: fit-content !important;
+    margin: 1em auto !important;
+    border-radius: 12px !important;
+  }
+
+  .brands-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+  }
+
+  .brand-item {
+    flex: 0 1 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    filter: grayscale(0%) brightness(100%);
+    opacity: 1;
+    transition: all 0.3s ease;
+  }
+
+  .brand-item:hover {
+    filter: grayscale(0%) brightness(150%);
+    opacity: 1;
+  }
+
+  .brand-item img {
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+    -webkit-filter: drop-shadow(2px 2px 0 black)
+                  drop-shadow(-2px -2px 0 black);
+    filter: drop-shadow(2px 2px 0 black) 
+        drop-shadow(-2px -2px 0 black);
+  }
+
+  @media (max-width: 768px) {
+    .brand-item {
+      flex: 0 1 120px;
+    }
+    
+    .brands-grid {
+      gap: 2rem;
+    }
+  }
+</style>
