@@ -1,0 +1,24 @@
+name: Cloudflare DNS Failover
+on:
+  repository_dispatch:
+    types: [server_down, server_up]
+
+jobs:
+  switch_dns:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Point to GitHub Pages (Server Down)
+        if: github.event.action == 'server_down' # Changed to .action
+        run: |
+          curl -X PUT "https://api.cloudflare.com/client/v4/zones/${{ secrets.CLOUDFLARE_ZONE_ID }}/dns_records/${{ secrets.CLOUDFLARE_RECORD_ID }}" \
+            -H "Authorization: Bearer ${{ secrets.CLOUDFLARE_TOKEN }}" \
+            -H "Content-Type: application/json" \
+            --data '{"type":"CNAME","name":"www","content":"bynatejones.github.io","ttl":1,"proxied":true}'
+
+      - name: Point back to Unraid Tunnel (Server Up)
+        if: github.event.action == 'server_up' # Changed to .action
+        run: |
+          curl -X PUT "https://api.cloudflare.com/client/v4/zones/${{ secrets.CLOUDFLARE_ZONE_ID }}/dns_records/${{ secrets.CLOUDFLARE_RECORD_ID }}" \
+            -H "Authorization: Bearer ${{ secrets.CLOUDFLARE_TOKEN }}" \
+            -H "Content-Type: application/json" \
+            --data '{"type":"CNAME","name":"www","content":"${{ secrets.CLOUDFLARE_TUNNEL_TARGET }}","ttl":1,"proxied":true}'
