@@ -16,23 +16,22 @@ on:
 jobs:
   switch_dns:
     runs-on: ubuntu-latest
+    env:
+      # Converts both manual inputs and webhook payloads into a single unified variable
+      EVENT_ACTION: ${{ github.event.action || github.event.inputs.test_action }}
     steps:
       - name: Point to GitHub Pages (Server Down)
-        if: |
-          github.event.action == 'server_down' || 
-          github.event.inputs.test_action == 'server_down'
+        if: env.EVENT_ACTION == 'server_down'
         run: |
           curl -X PUT "https://api.cloudflare.com/client/v4/zones/${{ secrets.CLOUDFLARE_ZONE_ID }}/dns_records/${{ secrets.CLOUDFLARE_RECORD_ID }}" \
             -H "Authorization: Bearer ${{ secrets.CLOUDFLARE_TOKEN }}" \
             -H "Content-Type: application/json" \
-            --data '{"type":"CNAME","name":"www","content":"bynatejones.github.io","ttl":1,"proxied":true}'
+            --data '{"type":"CNAME","name":"@","content":"bynatejones.github.io","ttl":1,"proxied":true}'
 
       - name: Point back to Unraid Tunnel (Server Up)
-        if: |
-          github.event.action == 'server_up' || 
-          github.event.inputs.test_action == 'server_up'
+        if: env.EVENT_ACTION == 'server_up'
         run: |
           curl -X PUT "https://api.cloudflare.com/client/v4/zones/${{ secrets.CLOUDFLARE_ZONE_ID }}/dns_records/${{ secrets.CLOUDFLARE_RECORD_ID }}" \
             -H "Authorization: Bearer ${{ secrets.CLOUDFLARE_TOKEN }}" \
             -H "Content-Type: application/json" \
-            --data '{"type":"CNAME","name":"www","content":"${{ secrets.CLOUDFLARE_TUNNEL_TARGET }}","ttl":1,"proxied":true}'
+            --data '{"type":"CNAME","name":"@","content":"${{ secrets.CLOUDFLARE_TUNNEL_TARGET }}","ttl":1,"proxied":true}'
