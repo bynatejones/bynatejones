@@ -280,7 +280,10 @@ const liveEventProjects = [
             import ResumeData from '../data/resume.json';
             var resumeCount = ResumeData.length;
             var count = (resumeCount - 52) * 18;
-            document.getElementById('resume-list').style.maxHeight = 1020 + count + "px";
+            			const resumeList = document.getElementById('resume-list');
+			if (resumeList) {
+			  resumeList.style.maxHeight = 1020 + count + "px";
+			}
         </script>
         <main class="resume-wrapper wrapper stack gap-2 lg:gap-48">
             <ul id="resume-list" class="resume-list">
