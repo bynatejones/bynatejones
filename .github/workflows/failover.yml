@@ -25,7 +25,7 @@ jobs:
           curl -X PUT "https://api.cloudflare.com/client/v4/zones/${{ secrets.CLOUDFLARE_ZONE_ID }}/dns_records/${{ secrets.CLOUDFLARE_RECORD_ID }}" \
             -H "Authorization: Bearer ${{ secrets.CLOUDFLARE_TOKEN }}" \
             -H "Content-Type: application/json" \
-            --data '{"type":"CNAME","name":"www","content":"bynatejones.github.io","ttl":1,"proxied":true}'
+            --data '{"type":"CNAME","name":"@","content":"bynatejones.github.io","ttl":1,"proxied":true}'
 
       - name: Point back to Unraid Tunnel (Server Up)
         if: env.EVENT_ACTION == 'server_up'
@@ -33,4 +33,4 @@ jobs:
           curl -X PUT "https://api.cloudflare.com/client/v4/zones/${{ secrets.CLOUDFLARE_ZONE_ID }}/dns_records/${{ secrets.CLOUDFLARE_RECORD_ID }}" \
             -H "Authorization: Bearer ${{ secrets.CLOUDFLARE_TOKEN }}" \
             -H "Content-Type: application/json" \
-            --data '{"type":"CNAME","name":"www","content":"${{ secrets.CLOUDFLARE_TUNNEL_TARGET }}","ttl":1,"proxied":true}'
+            --data '{"type":"CNAME","name":"@","content":"${{ secrets.CLOUDFLARE_TUNNEL_TARGET }}","ttl":1,"proxied":true}'
