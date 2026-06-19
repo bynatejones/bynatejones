@@ -2,10 +2,10 @@ name: Cloudflare DNS Failover
 on:
   repository_dispatch:
     types: [server_down, server_up]
-  workflow_dispatch: # Enables the manual "Run workflow" button
+  workflow_dispatch:
     inputs:
       test_action:
-        description: 'Choose which scenario to test manual failover'
+        description: 'Choose scenario to test manual failover'
         required: true
         default: 'server_down'
         type: choice
@@ -18,7 +18,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Point to GitHub Pages (Server Down)
-        if: github.event.action == 'server_down' || github.event.inputs.test_action == 'server_down'
+        if: |
+          github.event.action == 'server_down' || 
+          github.event.inputs.test_action == 'server_down'
         run: |
           curl -X PUT "https://api.cloudflare.com/client/v4/zones/${{ secrets.CLOUDFLARE_ZONE_ID }}/dns_records/${{ secrets.CLOUDFLARE_RECORD_ID }}" \
             -H "Authorization: Bearer ${{ secrets.CLOUDFLARE_TOKEN }}" \
@@ -26,7 +28,9 @@ jobs:
             --data '{"type":"CNAME","name":"www","content":"bynatejones.github.io","ttl":1,"proxied":true}'
 
       - name: Point back to Unraid Tunnel (Server Up)
-        if: github.event.action == 'server_up' || github.event.inputs.test_action == 'server_up'
+        if: |
+          github.event.action == 'server_up' || 
+          github.event.inputs.test_action == 'server_up'
         run: |
           curl -X PUT "https://api.cloudflare.com/client/v4/zones/${{ secrets.CLOUDFLARE_ZONE_ID }}/dns_records/${{ secrets.CLOUDFLARE_RECORD_ID }}" \
             -H "Authorization: Bearer ${{ secrets.CLOUDFLARE_TOKEN }}" \
