@@ -4,16 +4,33 @@ import '../styles/global.css';
 interface Props {
 	title?: string | undefined;
 	description?: string | undefined;
+	image?: string | undefined;
 }
 
 const {
-	title = 'Nate Jones: ICG 600 1st AC | DP',
-	description = 'Nate Jones portfolio and credits site',
+	title = 'Nate Jones',
+	description = 'ICG 600 1st AC and DP. Credits include Netflix, Warner Bros., Amazon, Nike. Los Angeles based.',
+	image = '/assets/nate-profile-2.jpg',
 } = Astro.props;
+
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+const imageURL = new URL(image, Astro.site);
 ---
 
 <meta charset="UTF-8" />
-<meta name="description" property="og:description" content={description} />
+<meta name="description" content={description} />
+<link rel="canonical" href={canonicalURL} />
+
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Nate Jones" />
+<meta property="og:title" content={title} />
+<meta property="og:description" content={description} />
+<meta property="og:url" content={canonicalURL} />
+<meta property="og:image" content={imageURL} />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content={title} />
+<meta name="twitter:description" content={description} />
+<meta name="twitter:image" content={imageURL} />
 <meta name="viewport" content="width=device-width" />
 <meta name="generator" content={Astro.generator} />
 <title>{title}</title>

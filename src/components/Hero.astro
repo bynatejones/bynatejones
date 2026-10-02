@@ -12,7 +12,7 @@ const { align = 'center', icon, tagline, taglinetwo, title } = Astro.props;
 
 <div class:list={['hero stack gap-4', align]}>
 	<div class="stack gap-2 hero-stack">
-        <h1 class="title" style="font-size: 4rem;">{title}</h1>
+        <h1 class="title">{title}</h1>
 		{tagline && <p class="tagline">{tagline}</p>}
         {taglinetwo && <p class="taglinetwo">{taglinetwo}</p>}
 	</div>
@@ -29,7 +29,8 @@ const { align = 'center', icon, tagline, taglinetwo, title } = Astro.props;
 	.title {
         /* max-width: 37ch; */
         margin-inline: auto;
-        font-size: 1.5rem;
+        font-size: clamp(2.5rem, 10vw, 4rem);
+        overflow-wrap: anywhere;
         color: #fff !important;
         white-space: pre-line;
         width: fit-content;
@@ -55,11 +56,6 @@ const { align = 'center', icon, tagline, taglinetwo, title } = Astro.props;
         border-radius: 6px;
     }
 
-	.title {
-		font-size: var(--text-3xl);
-		color: #fff;;
-	}
-
     .hero-icon {
         max-width: 50px;
         width: fit-content;
@@ -80,8 +76,5 @@ const { align = 'center', icon, tagline, taglinetwo, title } = Astro.props;
 			margin-inline: unset;
 		}
 
-		.title {
-			font-size: var(--text-2xl);
-		}
 	}
 </style>

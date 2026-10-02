@@ -1,227 +1,16 @@
 ---
-import { getCollection } from 'astro:content';
-
-// Layout import — provides basic page elements: <head>, <nav>, <footer> etc.
 import BaseLayout from '../layouts/BaseLayout.astro';
 
-// Component Imports
-import CallToAction from '../components/CallToAction.astro';
-import Grid from '../components/Grid.astro';
 import Hero from '../components/Hero.astro';
-import Icon from '../components/Icon.astro';
-import Pill from '../components/Pill.astro';
-import PortfolioPreview from '../components/PortfolioPreview.astro';
 import BrandCloud from '../components/BrandCloud.astro';
-import FeaturedWorkSection from '../components/FeaturedWorkSection.astro';
 
-// Page section components
-import ContactCTA from '../components/ContactCTA.astro';
-import Skills from '../components/Skills.astro';
-
-// Resume JSON data
 import ResumeData from '../data/resume.json';
 
-// Content Fetching: List four most recent work projects
-const projects = (await getCollection('work'))
-	.sort((a, b) => b.data.publishDate.valueOf() - a.data.publishDate.valueOf())
-	.slice(0, 4);
-
-// Add this with your other const declarations
-const commercialProjects = [
-	{
-		title: "Marvel x Adidas x Lexus",
-		thumbnail: "/assets/thumbnails/still004.jpg",
-		videoUrl: "https://vimeo.com/example1",
-		description: "Camera Operator"
-	},
-	{
-		title: "Nike SB - '20 Years'",
-		thumbnail: "/assets/thumbnails/still004.jpg",
-		videoUrl: "https://vimeo.com/example1",
-		description: "1st Assistant Camera"
-	},
-	{
-		title: "Jake Paul - WIN",
-		thumbnail: "/assets/thumbnails/still004.jpg",
-		videoUrl: "https://vimeo.com/example1",
-		description: "1st Assistant Camera"
-	},
-	{
-		title: "Honda x Team Liquid",
-		thumbnail: "/assets/thumbnails/still004.jpg",
-		videoUrl: "https://vimeo.com/example1",
-		description: "1st Assistant Camera"
-	},
-	{
-		title: "Nissan",
-		thumbnail: "/assets/thumbnails/still004.jpg",
-		videoUrl: "https://vimeo.com/example1",
-		description: "2nd Assistant Camera"
-	},
-	{
-		title: "Universal Hydrogen",
-		thumbnail: "/assets/thumbnails/still004.jpg",
-		videoUrl: "https://vimeo.com/example1",
-		description: "1st Assistant Camera"
-	},
-	{
-		title: "Samsung Event",
-		thumbnail: "/assets/thumbnails/still004.jpg",
-		videoUrl: "https://vimeo.com/example1",
-		description: "1st Assistant Camera"
-	},
-	{
-		title: "Ruffles - A'ja Wilson",
-		thumbnail: "/assets/thumbnails/still004.jpg",
-		videoUrl: "https://vimeo.com/example1",
-		description: "1st Assistant Camera"
-	}
-];
-
-const musicVideoProjects = [
-	{
-		title: "One Republic ft. Jelly Roll - 'Hurt'",
-		thumbnail: "/assets/thumbnails/still004.jpg",
-		videoUrl: "https://vimeo.com/example1",
-		description: "1st Assistant Camera - B Cam"
-	},
-	{
-		title: "Chris Brown - 'Psychic'",
-		thumbnail: "/assets/thumbnails/still004.jpg",
-		videoUrl: "https://vimeo.com/example1",
-		description: "1st Assistant Camera - B Cam"
-	},
-	{
-		title: "Machine Gun Kelly - 'Maybe'",
-		thumbnail: "/assets/thumbnails/still004.jpg",
-		videoUrl: "https://vimeo.com/example1",
-		description: "2nd Assistant Camera"
-	},
-	{
-		title: "JoJo Siwa - 'Guilty Pleasure'",
-		thumbnail: "/assets/thumbnails/still004.jpg",
-		videoUrl: "https://vimeo.com/example1",
-		description: "1st Assistant Camera - B Cam"
-	},
-	{
-		title: "JoJo Siwa - 'Choose Your Fighter'",
-		thumbnail: "/assets/thumbnails/still004.jpg",
-		videoUrl: "https://vimeo.com/example1",
-		description: "1st Assistant Camera - B Cam"
-	},
-	{
-		title: "Tyga - 'Uh Huh'",
-		thumbnail: "/assets/thumbnails/still004.jpg",
-		videoUrl: "https://vimeo.com/example1",
-		description: "2nd Assistant Camera"
-	},
-	{
-		title: "Ice Cube - 'Ego'",
-		thumbnail: "/assets/thumbnails/still004.jpg",
-		videoUrl: "https://vimeo.com/example1",
-		description: "2nd Assistant Camera"
-	}
-];
-
-const narrativeProjects = [
-	{
-		title: "Candy Flip",
-		thumbnail: "/assets/thumbnails/still004.jpg",
-		videoUrl: "https://vimeo.com/example1",
-		description: "1st Assistant Camera - B Cam // Feature"
-	},
-	{
-		title: "My Partner's Wife",
-		thumbnail: "/assets/thumbnails/still004.jpg",
-		videoUrl: "https://vimeo.com/example1",
-		description: "1st Assistant Camera // Feature"
-	},
-	{
-		title: "A Place of Bones",
-		thumbnail: "/assets/thumbnails/still004.jpg",
-		videoUrl: "https://vimeo.com/example1",
-		description: "Set Lighting Technician // Feature"
-	},
-	{
-		title: "Havoc Hunter",
-		thumbnail: "/assets/thumbnails/still004.jpg",
-		videoUrl: "https://vimeo.com/example1",
-		description: "1st Assistant Camera // Feature"
-	},
-	{
-		title: "Last Train to Fortune",
-		thumbnail: "/assets/thumbnails/still004.jpg",
-		videoUrl: "https://vimeo.com/example1",
-		description: "2nd Assistant Camera - A Cam // Feature"
-	},
-	{
-		title: "The Understudies",
-		thumbnail: "/assets/thumbnails/still004.jpg",
-		videoUrl: "https://vimeo.com/example1",
-		description: "1st Assistant Camera // Short"
-	}
-];
-
-const documentaryProjects = [
-	{
-		title: "Ryan Harrow",
-		thumbnail: "/assets/thumbnails/still004.jpg",
-		videoUrl: "https://vimeo.com/example1",
-		description: "Director of Photography"
-	},
-	{
-		title: "Netflix Tech",
-		thumbnail: "/assets/thumbnails/still004.jpg",
-		videoUrl: "https://vimeo.com/example1",
-		description: "1st Assistant Camera"
-	},
-	{
-		title: "8th Year",
-		thumbnail: "/assets/thumbnails/still004.jpg",
-		videoUrl: "https://vimeo.com/example1",
-		description: "1st Assistant Camera, Colorist"
-	},
-	{
-		title: "ESPN 30 for 30 - 'FaZe Clan'",
-		thumbnail: "/assets/thumbnails/still004.jpg",
-		videoUrl: "https://vimeo.com/example1",
-		description: "1st Assistant Camera"
-	}
-];
-
-const liveEventProjects = [
-	{
-		title: "Amazon Studios - 'Rings of Power'",
-		thumbnail: "/assets/thumbnails/still004.jpg",
-		videoUrl: "https://vimeo.com/example1",
-		description: "1st Assistant Camera - A Cam"
-	},
-	{
-		title: "Amazon Music Live Season 3",
-		thumbnail: "/assets/thumbnails/still004.jpg",
-		videoUrl: "https://vimeo.com/example1",
-		description: "Steadicam Assist"
-	},
-	{
-		title: "Offbrand - Ludwig's Streamer Games",
-		thumbnail: "/assets/thumbnails/still004.jpg",
-		videoUrl: "https://vimeo.com/example1",
-		description: "1st Assistant Camera - Steadicam A"
-	},
-	{
-		title: "Netflix - 'Woman of the Hour' EPK",
-		thumbnail: "/assets/thumbnails/still004.jpg",
-		videoUrl: "https://vimeo.com/example1",
-		description: "1st Assistant Camera - A Cam"
-	}
-];
-
-// Full Astro Component Syntax:
-// https://docs.astro.build/core-concepts/astro-components/
+// Reverse chronological. Dates are stored as "YYMM".
+const credits = [...ResumeData].sort((a, b) => parseInt(b.date) - parseInt(a.date));
 ---
-
 <BaseLayout>
-    <div class="stack gap-20 lg:gap-2">
+    <div class="stack gap-4 lg:gap-2">
         <div class="wrapper stack gap-8 lg:gap-20 header">
             <header class="hero">
                 <Hero
@@ -236,154 +25,71 @@ const liveEventProjects = [
                     <img
                         alt="Nate Jones portrait photo"
                         src="/assets/nate-profile-2.jpg"
+                        width="250"
+                        height="250"
+                        fetchpriority="high"
                         style="width: 250px; height: 250px; object-fit: cover; text-align: right;"
                     />
                 </div>
             </header>
         </div>
 
-        <!-- Add the BrandCloud component here -->
         <BrandCloud />
-
-		<!-- Add this after BrandCloud component -->
-		<!-- <div class="featured-work-wrapper">
-			<FeaturedWorkSection 
-				title="Commercials" 
-				projects={commercialProjects} 
-			/>
-			<FeaturedWorkSection 
-				title="Music Videos" 
-				projects={musicVideoProjects} 
-			/>
-			<FeaturedWorkSection 
-				title="Narrative" 
-				projects={narrativeProjects} 
-			/>
-            <FeaturedWorkSection 
-				title="Documentaries" 
-				projects={documentaryProjects} 
-			/>
-            <FeaturedWorkSection 
-				title="Live Events" 
-				projects={liveEventProjects} 
-			/>
-		</div> -->
 
         <div style="max-width: 1200px; width: 90%; margin: 1rem auto;">
             <hr style="border: 0; border-top: 2px solid #f0c91c;"/>
         </div>
-
-        <script>
-            // this code adjusts the height of the list based on
-            // the number of items, so columns stay the same size
-            // and they don't overflow off the page
-            import ResumeData from '../data/resume.json';
-            var resumeCount = ResumeData.length;
-            var count = (resumeCount - 52) * 18;
-            			const resumeList = document.getElementById('resume-list');
-			if (resumeList) {
-			  resumeList.style.maxHeight = 1020 + count + "px";
-			}
-        </script>
-        <main class="resume-wrapper wrapper stack gap-2 lg:gap-48">
+        <main class="resume-wrapper wrapper">
             <ul id="resume-list" class="resume-list">
                 {
                     // sort json reverse chronologically and map it to html
-                  ResumeData.sort((a, b) => parseInt(b.date) - parseInt(a.date)).map(({ date, title, type, role, camera }) => (
+                  credits.map(({ date, title, type, role, camera }) => (
                     <li class="resume-list-item">
-                      <p class="resume-top-line"><i><span class="resume-date">{date.split("")[2] + date.split("")[3] + "/" + date.split("")[0] + date.split("")[1]} ● {role}</span></i></p>
+                      <p class="resume-top-line"><i><span class="resume-date">{date.slice(2, 4)}/{date.slice(0, 2)} ● {role}</span></i></p>
                       <p class="resume-middle-line">{title}</p>
-                      <p class="resume-bottom-line"> {type} // {camera}</p>
+                      <p class="resume-bottom-line">{type}{camera && ` // ${camera}`}</p>
                     </li>
-                    <hr class="resume-list-divider"/>
                   ))
                 }
               </ul>
         </main>
-		<!-- <main class="wrapper stack gap-20 lg:gap-48">
-			<section class="section with-background with-cta">
-				<header class="section-header stack gap-2 lg:gap-4">
-					<h3>Selected Work</h3>
-					<p>Take a look below at some of my featured work for clients from the past few years.</p>
-				</header>
-
-				<div class="gallery">
-					<Grid variant="offset">
-						{
-							projects.map((project) => (
-								<li>
-									<PortfolioPreview project={project} />
-								</li>
-							))
-						}
-					</Grid>
-				</div>
-
-				<div class="cta">
-					<CallToAction href="/work/">
-						View All
-						<Icon icon="arrow-right" size="1.2em" />
-					</CallToAction>
-				</div>
-			</section>
-
-			<section class="section with-background bg-variant">
-				<header class="section-header stack gap-2 lg:gap-4">
-					<h3>Mentions</h3>
-					<p>
-						I have been fortunate enough to receive praise for my work in several publications. Take
-						a look below to learn more.
-					</p>
-				</header>
-
-				<div class="gallery">
-					<Grid variant="small">
-						{
-							['Medium', 'BuzzFeed', 'The Next Web', 'awwwards.', 'TechCrunch'].map((brand) => (
-								<li class="mention-card">
-									<p>{brand}</p>
-								</li>
-							))
-						}
-					</Grid>
-				</div>
-			</section>
-		</main> -->
-
-		<!-- <ContactCTA /> -->
     </div>
 </BaseLayout>
 
 <style>
+    /* Same max width as the .header box above. */
     .resume-wrapper {
-        /* max-height: 970px; */
+        max-width: 1200px;
+        padding-block: 1rem 3rem;
     }
+
+    /* Up to 4 columns, each at least 17rem wide. The browser balances the
+       columns and drops to fewer columns (down to 1) as the screen narrows. */
     .resume-list {
-        list-style-type: none;
-        display: flex;
-        flex-flow: column wrap;
-        flex: 0 0 30%;
-        justify-content: space-evenly;
-        max-height: 970px;
-        overflow: hidden;
-        margin: 5px;
+        list-style: none;
+        padding: 0;
+        columns: 4 17rem;
+        column-gap: 2.5rem;
     }
 
     .resume-list-item {
-        padding: 0px;
-        margin: 10px 0;
-        overflow: wrap;
-        max-width: 20rem;
-        flex-grow: 1;
+        break-inside: avoid;
+        padding: 0.6rem 0 0.7rem;
+        border-bottom: 2px solid #283044;
+        overflow-wrap: anywhere;
     }
 
     .resume-top-line {
         font-size: 0.8rem;
-        line-height: .8rem;
+        line-height: 1rem;
         font-weight: 200;
-        color: #a7a7a7
+        color: #a7a7a7;
     }
-    
+
+    .resume-date {
+        font-size: 0.8rem;
+    }
+
     .resume-middle-line {
         font-size: 1.3rem;
         line-height: 1.4rem;
@@ -394,28 +100,38 @@ const liveEventProjects = [
 
     .resume-bottom-line {
         font-size: 1.1rem;
-        line-height: 1rem;
+        line-height: 1.2rem;
         color: #fff;
         font-weight: 500;
         font-variant-caps: all-small-caps;
     }
 
-    .resume-list-divider {
-        max-width: 20%;
-        background-color: #283044;
-        height: 2px;
-        border: none;
+    /* Single column on phones: centre everything. */
+    @media (max-width: 36em) {
+        .resume-list-item {
+            text-align: center;
+        }
+
+        .resume-top-line {
+            font-size: 0.9rem;
+        }
+
+        .resume-middle-line {
+            font-size: 1.5rem;
+            line-height: 1.6rem;
+        }
+
+        .resume-bottom-line {
+            font-size: 1.2rem;
+            line-height: 1.4rem;
+        }
     }
-    
+
 	.hero {
 		display: flex;
 		flex-direction: column;
 		align-items: center;
 		gap: 2rem;
-	}
-
-	.roles {
-		display: none;
 	}
 
 	.hero img {
@@ -433,127 +149,8 @@ const liveEventProjects = [
 			gap: 3.75rem;
 		}
 
-		.roles {
-			margin-top: 0.5rem;
-			display: flex;
-			gap: 0.5rem;
-		}
-
 		.hero img {
-			aspect-ratio: 1.2 / 1;
 			border-radius: 0.5rem;
-			object-fit: cover;
-            /* border: 3px solid var(--accent-regular); */
 		}
 	}
-
-	/* ====================================================== */
-
-	.section {
-		display: grid;
-		gap: 2rem;
-	}
-
-	.with-background {
-		position: relative;
-	}
-
-	/* .with-background::before {
-		--hero-bg: var(--bg-image-subtle-2);
-
-		content: '';
-		position: absolute;
-		pointer-events: none;
-		left: 50%;
-		width: 100vw;
-		aspect-ratio: calc(2.25 / var(--bg-scale));
-		top: 0;
-		transform: translateY(-75%) translateX(-50%);
-		background:
-			url('/assets/backgrounds/noise.png') top center/220px repeat,
-			var(--hero-bg) center center / var(--bg-gradient-size) no-repeat,
-			var(--gray-999);
-		background-blend-mode: overlay, normal, normal, normal;
-		mix-blend-mode: var(--bg-blend-mode);
-		z-index: -1;
-	} */
-
-	/* .with-background.bg-variant::before {
-		--hero-bg: var(--bg-image-subtle-1);
-	}
- */
-	.section-header {
-		justify-self: center;
-		text-align: center;
-		max-width: 50ch;
-		font-size: var(--text-md);
-		color: var(--gray-300);
-	}
-
-	.section-header h3 {
-		font-size: var(--text-2xl);
-	}
-
-	@media (min-width: 50em) {
-		.section {
-			grid-template-columns: repeat(4, 1fr);
-			grid-template-areas: 'header header header header' 'gallery gallery gallery gallery';
-			gap: 5rem;
-		}
-
-		.section.with-cta {
-			grid-template-areas: 'header header header cta' 'gallery gallery gallery gallery';
-		}
-
-		.section-header {
-			grid-area: header;
-			font-size: var(--text-lg);
-		}
-
-		.section-header h3 {
-			font-size: var(--text-4xl);
-		}
-
-		.with-cta .section-header {
-			justify-self: flex-start;
-			text-align: left;
-		}
-
-		.gallery {
-			grid-area: gallery;
-		}
-
-		.cta {
-			grid-area: cta;
-		}
-	}
-
-	/* ====================================================== */
-
-	.mention-card {
-		display: flex;
-		height: 7rem;
-		justify-content: center;
-		align-items: center;
-		text-align: center;
-		border: 1px solid var(--gray-800);
-		border-radius: 1.5rem;
-		color: var(--gray-300);
-		background: var(--gradient-subtle);
-		box-shadow: var(--shadow-sm);
-	}
-
-	@media (min-width: 50em) {
-		.mention-card {
-			border-radius: 1.5rem;
-			height: 9.5rem;
-		}
-	}
-
-    .featured-work {
-        margin: 3rem auto;
-        display: flex;
-        flex-direction: column;
-        gap: 4rem;
-    }
 </style>
