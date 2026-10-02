@@ -684,5 +684,215 @@
         "type": "Short",
         "role": "1st Assistant Camera",
         "camera": "Red Komodo"
+    },
+    {
+        "date": "2601",
+        "title": "Anh Phoong Law",
+        "type": "Commercial",
+        "role": "1st Assistant Camera",
+        "camera": ""
+    },
+    {
+        "date": "2601",
+        "title": "Jill Scott - 'Pressha'",
+        "type": "Music Video",
+        "role": "2nd Assistant Camera",
+        "camera": ""
+    },
+    {
+        "date": "2603",
+        "title": "CTC Service Ace",
+        "type": "Commercial",
+        "role": "1st Assistant Camera",
+        "camera": ""
+    },
+    {
+        "date": "2603",
+        "title": "ESPN x TJ Maxx",
+        "type": "Commercial",
+        "role": "1st Assistant Camera",
+        "camera": ""
+    },
+    {
+        "date": "2603",
+        "title": "Target Skincare",
+        "type": "Commercial",
+        "role": "1st Assistant Camera",
+        "camera": ""
+    },
+    {
+        "date": "2603",
+        "title": "Glamour",
+        "type": "Short",
+        "role": "1st Assistant Camera",
+        "camera": ""
+    },
+    {
+        "date": "2604",
+        "title": "Liquid IV",
+        "type": "Commercial",
+        "role": "1st Assistant Camera",
+        "camera": ""
+    },
+    {
+        "date": "2604",
+        "title": "Kaiser Permanente",
+        "type": "Commercial",
+        "role": "2nd Assistant Camera",
+        "camera": ""
+    },
+    {
+        "date": "2604",
+        "title": "Nike NWSL Interview",
+        "type": "Commercial",
+        "role": "1st Assistant Camera",
+        "camera": ""
+    },
+    {
+        "date": "2604",
+        "title": "Adidas",
+        "type": "Commercial",
+        "role": "1st Assistant Camera",
+        "camera": ""
+    },
+    {
+        "date": "2605",
+        "title": "Cornerstone 5.1",
+        "type": "Commercial",
+        "role": "1st Assistant Camera",
+        "camera": ""
+    },
+    {
+        "date": "2605",
+        "title": "Noah Kahan Tour Visuals",
+        "type": "Music Video",
+        "role": "1st Assistant Camera",
+        "camera": ""
+    },
+    {
+        "date": "2605",
+        "title": "Amvuttra",
+        "type": "Commercial",
+        "role": "1st Assistant Camera - B Cam",
+        "camera": ""
+    },
+    {
+        "date": "2605",
+        "title": "K.A.Z. Studio Recording",
+        "type": "Commercial",
+        "role": "1st Assistant Camera",
+        "camera": ""
+    },
+    {
+        "date": "2606",
+        "title": "RealEyes - 'Mirror Mirror'",
+        "type": "Music Video",
+        "role": "1st Assistant Camera",
+        "camera": ""
+    },
+    {
+        "date": "2606",
+        "title": "Nike Toma Live",
+        "type": "Live Event",
+        "role": "Steadicam Assist",
+        "camera": ""
+    },
+    {
+        "date": "2606",
+        "title": "Supergirl/Waymo",
+        "type": "Commercial",
+        "role": "1st Assistant Camera",
+        "camera": ""
+    },
+    {
+        "date": "2606",
+        "title": "Tito Double P Live",
+        "type": "Live Event",
+        "role": "Steadicam Assist",
+        "camera": ""
+    },
+    {
+        "date": "2607",
+        "title": "Hydration Drink",
+        "type": "Commercial",
+        "role": "1st Assistant Camera",
+        "camera": ""
+    },
+    {
+        "date": "2607",
+        "title": "Sam Smith Live",
+        "type": "Live Event",
+        "role": "Steadicam Assist",
+        "camera": ""
+    },
+    {
+        "date": "2607",
+        "title": "Apple Music: The Game vs. YG",
+        "type": "Live Event",
+        "role": "Steadicam Assist",
+        "camera": ""
+    },
+    {
+        "date": "2607",
+        "title": "Sedona Feature Film",
+        "type": "Feature",
+        "role": "1st Assistant Camera",
+        "camera": ""
+    },
+    {
+        "date": "2608",
+        "title": "Hilary Duff - 'CATastrophe'",
+        "type": "Music Video",
+        "role": "1st Assistant Camera",
+        "camera": ""
+    },
+    {
+        "date": "2609",
+        "title": "Ray Vaughn - 'Set It Off'",
+        "type": "Music Video",
+        "role": "1st Assistant Camera",
+        "camera": ""
+    },
+    {
+        "date": "2609",
+        "title": "Sombr Tour Visuals",
+        "type": "Music Video",
+        "role": "1st Assistant Camera",
+        "camera": ""
+    },
+    {
+        "date": "2609",
+        "title": "Polymarket",
+        "type": "Commercial",
+        "role": "1st Assistant Camera",
+        "camera": ""
+    },
+    {
+        "date": "2609",
+        "title": "Orange",
+        "type": "Commercial",
+        "role": "1st Assistant Camera",
+        "camera": ""
+    },
+    {
+        "date": "2609",
+        "title": "GloRilla x Sexxy Redd - 'Jiggly'",
+        "type": "Music Video",
+        "role": "1st Assistant Camera",
+        "camera": ""
+    },
+    {
+        "date": "2609",
+        "title": "Almost Friday Sketch",
+        "type": "Episodic",
+        "role": "1st Assistant Camera",
+        "camera": ""
+    },
+    {
+        "date": "2609",
+        "title": "Waymo Vegas",
+        "type": "Commercial",
+        "role": "1st Assistant Camera",
+        "camera": ""
     }
 ]
