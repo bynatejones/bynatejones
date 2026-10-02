@@ -1,80 +1,49 @@
 ---
-import { getCollection } from 'astro:content';
-
 import BaseLayout from '../layouts/BaseLayout.astro';
 
 import ContactCTA from '../components/ContactCTA.astro';
-import PortfolioPreview from '../components/PortfolioPreview.astro';
 import Hero from '../components/Hero.astro';
-import Grid from '../components/Grid.astro';
-
-const projects = (await getCollection('work')).sort(
-	(a, b) => b.data.publishDate.valueOf() - a.data.publishDate.valueOf()
-);
 ---
 
-<BaseLayout
-	title="Cinematography"
-	description=""
->
+<BaseLayout title="Cinematography | Nate Jones" description="Cinematography stills by Nate Jones, ICG 600 1st AC and DP based in Los Angeles.">
 	<div class="stack gap-20">
 		<main class="wrapper stack gap-8" style="margin: auto;">
-			<Hero
-				title="Cinematography"
-				tagline=""
-				align="start"
-			/>
+			<Hero title="Cinematography" tagline="" align="start" />
 
-            <!-- <Grid>
-                <iframe src="https://player.vimeo.com/video/271437390?badge=0&amp;autopause=0&amp;quality_selector=1&amp;player_id=0&amp;app_id=58479" width="640" height="272" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" title="Nathaniel Jones Director of Photography Demo Reel"></iframe>
-
-                <iframe src="https://player.vimeo.com/video/257804857?badge=0&amp;autopause=0&amp;quality_selector=1&amp;player_id=0&amp;app_id=58479" width="640" height="272" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" title="Nathaniel Jones Director of Photography Demo Reel"></iframe>
-            </Grid> -->
-
-            <img class="portfolio-img" src="/assets/portfolio/faerie01.jpg"/>
-            <img class="portfolio-img" src="/assets/portfolio/faerie009.jpg"/>
-            <img class="portfolio-img" src="/assets/portfolio/imwaiting01.jpg"/>
-            <img class="portfolio-img" src="/assets/portfolio/imwaiting04.jpg"/>
-            <img class="portfolio-img" src="/assets/portfolio/imwaiting05.jpg"/>
-            <img class="portfolio-img" src="/assets/portfolio/faerie034.jpg"/>
-            <img class="portfolio-img" src="/assets/portfolio/faerie036.jpg"/>
-            <img class="portfolio-img" src="/assets/portfolio/faerie048.jpg"/>
-            <img class="portfolio-img" src="/assets/portfolio/imwaiting06.jpg"/>
-            <img class="portfolio-img" src="/assets/portfolio/imwaiting07.jpg"/>
-            <img class="portfolio-img" src="/assets/portfolio/grand-falls-2.jpg"/>
-            <img class="portfolio-img" src="/assets/portfolio/grand-falls-4.jpg"/>
-            <img class="portfolio-img" src="/assets/portfolio/sky-4-scaled.jpg"/>
-            <img class="portfolio-img" src="/assets/portfolio/still001.jpg"/>
-            <img class="portfolio-img" src="/assets/portfolio/still003-1-scaled.jpg"/>
-            <img class="portfolio-img" src="/assets/portfolio/still004.jpg"/>
-            <img class="portfolio-img" src="/assets/portfolio/still006.jpg"/>
-            <img class="portfolio-img" src="/assets/portfolio/still014.jpg"/>
-            <img class="portfolio-img" src="/assets/portfolio/imwaiting02.jpg"/>
-            <img class="portfolio-img" src="/assets/portfolio/imwaiting03.jpg"/>
-            <img class="portfolio-img" src="/assets/portfolio/still015.jpg"/>
-            <img class="portfolio-img" src="/assets/portfolio/still020.jpg"/>
-            <img class="portfolio-img" src="/assets/portfolio/still028.jpg"/>
-            <img class="portfolio-img" src="/assets/portfolio/yosemite.jpg"/>
-
-			<Grid variant="offset">
-				<!-- {
-					projects.map((project) => (
-						<li>
-							<PortfolioPreview project={project} />
-						</li>
-					))
-				} -->
-
-                
-			</Grid>
+			<img class="portfolio-img" src="/assets/portfolio/faerie01.jpg" alt="Close-up of a creature in a moss-covered antler-like skull mask, from the short film Faerie" width="1920" height="816" decoding="async" />
+			<img class="portfolio-img" src="/assets/portfolio/faerie009.jpg" alt="Dimly lit profile of a bearded man looking down, from Faerie" width="1920" height="816" loading="lazy" decoding="async" />
+			<img class="portfolio-img" src="/assets/portfolio/imwaiting01.jpg" alt="Low-angle shot of a silver-slippered pair of feet beside a boxer in a dark warehouse, from I'm Waiting" width="4800" height="3600" loading="lazy" decoding="async" />
+			<img class="portfolio-img" src="/assets/portfolio/imwaiting04.jpg" alt="Two shirtless boxers sparring in front of a bright backlight, from I'm Waiting" width="4800" height="3600" loading="lazy" decoding="async" />
+			<img class="portfolio-img" src="/assets/portfolio/imwaiting05.jpg" alt="Bearded, tattooed boxer glaring at the camera in a hazy warehouse ring, from I'm Waiting" width="4800" height="3600" loading="lazy" decoding="async" />
+			<img class="portfolio-img" src="/assets/portfolio/faerie034.jpg" alt="Two silhouetted figures sitting in a cave mouth with a basket, looking out at a forest, from Faerie" width="1920" height="816" loading="lazy" decoding="async" />
+			<img class="portfolio-img" src="/assets/portfolio/faerie036.jpg" alt="Shadowy creature in a dark cave with a faint rim of light, from Faerie" width="1920" height="816" loading="lazy" decoding="async" />
+			<img class="portfolio-img" src="/assets/portfolio/faerie048.jpg" alt="Young girl with long hair looking off-camera in a dark room, from Faerie" width="1920" height="816" loading="lazy" decoding="async" />
+			<img class="portfolio-img" src="/assets/portfolio/imwaiting06.jpg" alt="Silhouette of a boxer mid-swing against a bright light and a corrugated metal ceiling, from I'm Waiting" width="4800" height="3600" loading="lazy" decoding="async" />
+			<img class="portfolio-img" src="/assets/portfolio/imwaiting07.jpg" alt="Boxer in white trunks lying bloodied on the floor in a spotlight as a woman in silver shoes stands over him, from I'm Waiting" width="4800" height="3600" loading="lazy" decoding="async" />
+			<img class="portfolio-img" src="/assets/portfolio/grand-falls-2.jpg" alt="Starry night sky over Grand Falls waterfalls in the Arizona desert" width="1078" height="720" loading="lazy" decoding="async" />
+			<img class="portfolio-img" src="/assets/portfolio/grand-falls-4.jpg" alt="SUV parked on a desert road beneath a dense field of stars" width="1078" height="720" loading="lazy" decoding="async" />
+			<img class="portfolio-img" src="/assets/portfolio/sky-4-scaled.jpg" alt="Night sky with a faint meteor trail above an orange-lit horizon" width="1920" height="1280" loading="lazy" decoding="async" />
+			<img class="portfolio-img" src="/assets/portfolio/still001.jpg" alt="Young man in a plaid shirt and red tee standing at the top of an outdoor metal staircase" width="1920" height="816" loading="lazy" decoding="async" />
+			<img class="portfolio-img" src="/assets/portfolio/still003-1-scaled.jpg" alt="Man smoking a cigarette at a typewriter in a sunlit room" width="1920" height="816" loading="lazy" decoding="async" />
+			<img class="portfolio-img" src="/assets/portfolio/still004.jpg" alt="Sepia-toned period shot of a woman and a boy looking out a window" width="1920" height="1080" loading="lazy" decoding="async" />
+			<img class="portfolio-img" src="/assets/portfolio/still006.jpg" alt="Silhouetted man in a hat standing beside a wooden cross at dusk in the desert" width="1920" height="1080" loading="lazy" decoding="async" />
+			<img class="portfolio-img" src="/assets/portfolio/still014.jpg" alt="Man in a wide-brimmed hat standing in a desert landscape with mountains behind" width="1920" height="1080" loading="lazy" decoding="async" />
+			<img class="portfolio-img" src="/assets/portfolio/imwaiting02.jpg" alt="Boxer in black gloves seen from below, shot through haze toward a warm light, from I'm Waiting" width="4800" height="3600" loading="lazy" decoding="async" />
+			<img class="portfolio-img" src="/assets/portfolio/imwaiting03.jpg" alt="Two boxers in a ring lit by warm practical lights, one bloodied, seen from a low angle, from I'm Waiting" width="4800" height="3600" loading="lazy" decoding="async" />
+			<img class="portfolio-img" src="/assets/portfolio/still015.jpg" alt="Curly-haired man in dirty period clothes sitting on a cabin floor" width="1920" height="1080" loading="lazy" decoding="async" />
+			<img class="portfolio-img" src="/assets/portfolio/still020.jpg" alt="Woman in a nightgown holding an oil lantern, startled, in a dim bedroom" width="1920" height="1080" loading="lazy" decoding="async" />
+			<img class="portfolio-img" src="/assets/portfolio/still028.jpg" alt="Period family dinner scene: a woman, a man and a boy seated at a wooden table by a window" width="1920" height="1080" loading="lazy" decoding="async" />
+			<img class="portfolio-img" src="/assets/portfolio/yosemite.jpg" alt="Moonlit Yosemite cliffs and pine trees under a starry night sky" width="1920" height="1280" loading="lazy" decoding="async" />
 		</main>
 		<ContactCTA />
 	</div>
 </BaseLayout>
 
 <style>
-    .portfolio-img {
-        border-radius: 0.6rem;
-        margin: auto;
-    }
+	.portfolio-img {
+		border-radius: 0.6rem;
+		margin: auto;
+		max-width: 100%;
+		height: auto;
+	}
 </style>
